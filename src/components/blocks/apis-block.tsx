@@ -1,5 +1,9 @@
 "use client";
 
+import Image from "next/image";
+import { useState } from "react";
+import { Check, Copy } from "lucide-react";
+
 import {
   CodeBlock,
   CodeBlockCode,
@@ -7,9 +11,6 @@ import {
 } from "@/components/ui/code-block";
 import { Button } from "@/components/ui/button";
 import { DashedLine } from "@/components/dashed-line";
-import { Check, Copy } from "lucide-react";
-import { useState } from "react";
-import Image from "next/image";
 
 const API_ENDPOINTS = [
   {
@@ -390,7 +391,11 @@ function EndpointCodeBlock({
   endpoint,
   language,
 }: {
-  endpoint: any;
+  endpoint: {
+    method: string;
+    path: string;
+    code: { curl: string; node: string; python: string };
+  };
   language: "curl" | "node" | "python";
 }) {
   const [copied, setCopied] = useState(false);
