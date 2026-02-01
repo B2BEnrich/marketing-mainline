@@ -20,7 +20,19 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
-const ITEMS = [
+type NavDropdownItem = {
+  title: string;
+  href: string;
+  description: string;
+};
+
+type NavItem = {
+  label: string;
+  href: string;
+  dropdownItems?: NavDropdownItem[];
+};
+
+const ITEMS: NavItem[] = [
   { label: "Docs", href: "https://docs.b2benrich.com" },
   { label: "Pricing", href: "#pricing" },
   /*{
