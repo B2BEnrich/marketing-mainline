@@ -8,6 +8,8 @@ import { Navbar } from "@/components/blocks/navbar";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
+import { FooterPricing } from "@/components/blocks/footer-pricing";
+import { Separator } from "@/components/ui/separator";
 
 const dmSans = localFont({
   src: [
@@ -149,9 +151,16 @@ export default function RootLayout({
           <StyleGlideProvider />
           <Navbar />
           <div className="mx-4 md:mx-8 lg:mx-12 xl:mx-16">
-            <div className="border-border border-x px-4 md:px-8 lg:px-12">
+            <div className="border-border border-x">
               <main className="">{children}</main>
-              <Footer />
+            </div>
+          </div>
+          <div className="bg-secondary-foreground">
+            <div className="mx-4 md:mx-8 lg:mx-12 xl:mx-16">
+              <div className="border-border/20 border-x">
+                <FooterPricing />
+                <Footer />
+              </div>
             </div>
           </div>
         </ThemeProvider>
@@ -159,3 +168,4 @@ export default function RootLayout({
     </html>
   );
 }
+//<Separator className="my-0 h-px" />

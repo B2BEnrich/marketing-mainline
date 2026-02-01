@@ -21,7 +21,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
-  { label: "Docs", href: "/docs" },
+  { label: "Docs", href: "https://docs.b2benrich.com" },
   { label: "Pricing", href: "/pricing" },
   {
     label: "Endpoints",
@@ -59,19 +59,21 @@ export const Navbar = () => {
       )}
     >
       <div className="mx-4 md:mx-8 lg:mx-12 xl:mx-16">
-        <div className="flex items-center justify-between py-3">
-          <Link href="/" className="flex shrink-0 items-center gap-2">
-            <Image
-              src="/logo.svg"
-              alt="logo"
-              width={94}
-              height={18}
-              className="dark:invert"
-            />
-          </Link>
+        <div className="grid grid-cols-3 items-center py-3">
+          <div className="justify-self-start">
+            <Link href="/" className="flex shrink-0 items-center gap-2">
+              <Image
+                src="/logo.svg"
+                alt="logo"
+                width={94}
+                height={18}
+                className="dark:invert"
+              />
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="max-lg:hidden">
+          <NavigationMenu className="justify-self-center max-lg:hidden">
             <NavigationMenuList>
               {ITEMS.map((link) =>
                 link.dropdownItems ? (
@@ -121,7 +123,7 @@ export const Navbar = () => {
           </NavigationMenu>
 
           {/* Auth Buttons */}
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2.5 justify-self-end">
             <ThemeToggle />
             <Link
               href="https://app.b2benrich.com/auth/sign-up"

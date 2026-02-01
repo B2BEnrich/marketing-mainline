@@ -1,22 +1,27 @@
 import { ApiSection } from "@/components/blocks/apis-block";
 import { FAQ } from "@/components/blocks/faq";
 import { Hero } from "@/components/blocks/hero";
+import { PatternSeparator } from "@/components/blocks/pattern-separator";
 import { Pricing } from "@/components/blocks/pricing";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <ApiSection />
-      <Pricing />
-      <FAQ />
+      <div className="px-4 md:px-8 lg:px-12">
+        <Hero />
+      </div>
+
+      <PatternSeparator heightClassName="h-[170px]" />
+      <div className="px-4 md:px-8 lg:px-12">
+        <ApiSection />
+      </div>
     </>
   );
 }
 
 /*
 <Logos />
-
+      <FAQ />
       <Features />
       <ResourceAllocation />
       <Testimonials />
