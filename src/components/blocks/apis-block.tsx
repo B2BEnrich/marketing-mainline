@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 import { Check, Copy } from "lucide-react";
 
@@ -246,6 +247,7 @@ response = requests.post(
 
 export function CodeBlockWithHeader() {
   const [copied, setCopied] = useState(false);
+  const { resolvedTheme } = useTheme();
 
   const code = `import { useState } from 'react';
 
@@ -270,7 +272,7 @@ function Counter() {
 
   return (
     <div className="w-full max-w-[450px]">
-      <CodeBlock>
+      <CodeBlock className="shadow-lg">
         <CodeBlockGroup className="border-border border-b py-2 pr-2 pl-4">
           <div className="flex items-center gap-2">
             <div className="bg-primary/10 text-primary rounded px-2 py-1 text-xs font-medium">
@@ -291,7 +293,14 @@ function Counter() {
             )}
           </Button>
         </CodeBlockGroup>
-        <CodeBlockCode code={code} language="tsx" />
+        <div className="bg-white dark:bg-background">
+          <CodeBlockCode 
+            code={code} 
+            language="tsx"
+            theme={resolvedTheme === "dark" ? "github-dark" : "github-light"}
+            className="p-4 text-xs lg:text-sm bg-transparent"
+          />
+        </div>
       </CodeBlock>
     </div>
   );
@@ -309,7 +318,7 @@ export function ApiSection() {
   ] as const;
 
   return (
-    <section className="py-28 lg:py-32">
+    <section className="py-20 lg:py-20">
       <div className="container">
         <div className="mb-12 flex items-start justify-between">
           <div className="text-start">
@@ -401,6 +410,7 @@ function EndpointCodeBlock({
   language: "curl" | "node" | "python";
 }) {
   const [copied, setCopied] = useState(false);
+  const { resolvedTheme } = useTheme();
   const code = endpoint.code[language];
   const languageMap = {
     curl: "bash",
@@ -416,7 +426,7 @@ function EndpointCodeBlock({
 
   return (
     <div className="w-xl">
-      <CodeBlock>
+      <CodeBlock className="shadow-lg">
         <CodeBlockGroup className="border-border border-b py-2 pr-2 pl-4">
           <div className="flex items-center gap-2">
             <div className="bg-primary/10 text-primary rounded px-2 py-1 text-xs font-medium">
@@ -439,7 +449,14 @@ function EndpointCodeBlock({
             )}
           </Button>
         </CodeBlockGroup>
-        <CodeBlockCode code={code} language={languageMap[language]} />
+        <div className="bg-white dark:bg-background">
+          <CodeBlockCode 
+            code={code} 
+            language={languageMap[language]}
+            theme={resolvedTheme === "dark" ? "github-dark" : "github-light"}
+            className="p-4 text-xs lg:text-sm bg-transparent"
+          />
+        </div>
       </CodeBlock>
     </div>
   );

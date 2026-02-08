@@ -69,7 +69,7 @@ export function GlimmeringMap({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative flex h-full w-full items-center justify-center overflow-hidden opacity-20 dark:opacity-10 dark:grayscale-0",
+        "relative flex h-full w-full items-center justify-center overflow-hidden opacity-20 dark:opacity-15 dark:grayscale-0",
         className,
       )}
     >

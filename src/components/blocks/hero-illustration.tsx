@@ -87,12 +87,12 @@ export const HeroIllustration = () => {
     
     const intervalId = setInterval(() => {
       setDisplayedCode(targetCode.slice(0, index));
-      index += 3; // Speed up typing by adding 3 chars at a time
+      index += 8; // Speed up typing by adding 8 chars at a time
       if (index > targetCode.length) {
         setDisplayedCode(targetCode);
         clearInterval(intervalId);
       }
-    }, 10);
+    }, 5);
 
     return () => clearInterval(intervalId);
   }, [activeTab, activeSample.code]);
@@ -169,7 +169,7 @@ export const HeroIllustration = () => {
                           )}
                       </Button>
                   </CodeBlockGroup>
-                  <div className="min-h-[250px] bg-white dark:bg-background">
+                  <div className="h-[320px] overflow-y-auto bg-white dark:bg-background">
                     <CodeBlockCode 
                         code={displayedCode} 
                         language="json"

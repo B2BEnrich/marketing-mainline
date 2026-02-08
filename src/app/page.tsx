@@ -1,4 +1,5 @@
 import { ApiSection } from "@/components/blocks/apis-block";
+import { EnrichmentData } from "@/components/blocks/enrichment-data";
 import { Hero } from "@/components/blocks/hero";
 import { PatternSeparator } from "@/components/blocks/pattern-separator";
 
@@ -9,7 +10,10 @@ export default function Home() {
         <Hero />
       </div>
 
-      <PatternSeparator heightClassName="h-[170px]" />
+      <div className="px-0 md:px-8 lg:px-12">
+        <EnrichmentData />
+      </div>
+
       <div className="px-0 md:px-8 lg:px-12">
         <ApiSection />
       </div>

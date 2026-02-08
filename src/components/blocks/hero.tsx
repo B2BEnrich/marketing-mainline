@@ -15,13 +15,16 @@ export const Hero = () => {
       <div className="container relative z-10 flex flex-col items-center justify-center gap-8 text-center">
         {/* Main content */}
         <div className="max-w-4xl z-10 relative">
+          <div className="mb-6 inline-flex rounded-full border border-border bg-card/50 backdrop-blur-sm px-6 py-2 shadow-sm">
+            <span className="text-foreground text-sm font-semibold md:text-sm">Complete Contact & Account Data API</span>
+          </div>
           
           <h1 className="text-foreground text-5xl tracking-tight md:text-6xl lg:text-7xl">
-            B2B Data Enrichment
+            B2B Data Enrichment API
           </h1>
 
           <p className="text-muted-foreground text-md mt-5 md:text-lg lg:text-xl text-balance">
-            Access 550M+ business contacts with real-time intent data across 30,000+ categories. Power your AI Agents and apps with our powerful APIs.
+            Access 550M+ business contacts with real-time intent data. Power your AI Agents and apps with 250+ data points per prospect.
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4">
