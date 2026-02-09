@@ -1,5 +1,6 @@
 import { ApiSection } from "@/components/blocks/apis-block";
 import { EnrichmentData } from "@/components/blocks/enrichment-data";
+import { FAQ } from "@/components/blocks/faq";
 import { FooterPricing } from "@/components/blocks/footer-pricing";
 import { Hero } from "@/components/blocks/hero";
 import { HowCreditsWork } from "@/components/blocks/how-credits-work";
@@ -23,6 +24,8 @@ export default function Home() {
       <FooterPricing />
 
       <HowCreditsWork />
+
+      <FAQ />
     </>
   );
 }

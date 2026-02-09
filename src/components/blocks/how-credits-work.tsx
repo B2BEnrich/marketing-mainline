@@ -1,28 +1,30 @@
+import { Mail, Smartphone, Search, Target } from "lucide-react";
+
 export function HowCreditsWork() {
   const creditItems = [
     {
       title: "Email",
       credits: "1 Credit",
       description: "Get verified work email of the prospect you want to reach out to.",
-      icon: "📧",
+      icon: Mail,
     },
     {
       title: "Phone",
       credits: "1 Credit",
       description: "Get verified mobile phone number of the person you want to reach out to.",
-      icon: "📱",
+      icon: Smartphone,
     },
     {
       title: "Reverse lookup",
       credits: "1 Credit",
       description: "Turn an email, work or personal, into a full person profile and company profile.",
-      icon: "🔍",
+      icon: Search,
     },
     {
       title: "Prospector search",
       credits: "5 Credits",
       description: "Search and find prospects matching your ideal customer profile criteria.",
-      icon: "🎯",
+      icon: Target,
     },
   ];
 
@@ -44,7 +46,7 @@ export function HowCreditsWork() {
             >
               <div className="mb-4 flex items-start justify-between">
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">{item.icon}</span>
+                  <item.icon className="h-6 w-6 text-primary" />
                   <h3 className="text-lg font-semibold">{item.title}</h3>
                 </div>
                 <div className="rounded-full bg-primary/10 px-3 py-1">

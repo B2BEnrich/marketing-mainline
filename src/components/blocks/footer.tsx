@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-white dark:bg-black flex flex-col items-center gap-14 pt-20 pb-0">
       <div className="container space-y-3 text-center">
-        <h2 className="text-foreground text-2xl tracking-tight md:text-4xl lg:text-5xl">
+        <h2 className="text-foreground text-4xl md:text-5xl font-semibold tracking-tight">
           Start your free trial today
         </h2>
         <p className="text-foreground mx-auto max-w-xl leading-snug text-balance">
