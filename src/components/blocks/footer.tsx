@@ -12,12 +12,12 @@ export function Footer() {
         <Globe />
       </div>
 
-      <div className="container relative z-10 flex flex-col items-center gap-6 md:gap-14 text-center pb-0">
+      <div className="container relative z-10 flex flex-col items-center gap-6 md:gap-12 text-center pb-0">
         <div className="space-y-3">
           <h2 className="text-foreground text-5xl md:text-6xl font-semibold tracking-tight">
             Start your free trial today
           </h2>
-          <p className="text-foreground mx-auto max-w-2xl leading-snug text-balance text-xl">
+          <p className="text-muted-foreground mx-auto max-w-2xl leading-snug text-balance text-xl">
             Accurate, fast, and reliable B2B data enrichment to enhance your
             business data quality and insights.
           </p>
