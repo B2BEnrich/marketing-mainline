@@ -1,20 +1,30 @@
 import { ArrowRight } from "lucide-react";
 
+import { HeroIllustration } from "@/components/blocks/hero-illustration";
+import { HeroStats } from "@/components/blocks/hero-stats";
 import { Button } from "@/components/ui/button";
+import { GlimmeringMap } from "@/components/ui/glimmering-map";
 
 export const Hero = () => {
   return (
-    <section className="py-28 lg:py-32 lg:pt-35">
-      <div className="container flex flex-col items-center justify-center gap-8 text-center">
+    <section className="relative py-16 lg:py-32 lg:pt-28 overflow-hidden">
+      <div className="absolute inset-0 z-0 pointer-events-none md:top-48 lg:top-100 lg:scale-130">
+        <GlimmeringMap className="h-full w-full object-cover" />
+      </div>
+      
+      <div className="container relative z-10 flex flex-col items-center justify-center gap-8 text-center">
         {/* Main content */}
-        <div className="max-w-3xl">
-          <h1 className="text-foreground text-3xl tracking-tight md:text-4xl lg:text-5xl">
-            B2B Data Enrichment
+        <div className="max-w-4xl z-10 relative">
+          <div className="mb-6 inline-flex rounded-full border border-border bg-card/50 backdrop-blur-sm px-6 py-2 shadow-sm">
+            <span className="text-foreground text-sm font-semibold md:text-sm">Complete Contact & Account Data API</span>
+          </div>
+          
+          <h1 className="text-foreground text-5xl tracking-tight md:text-6xl lg:text-7xl">
+            B2B Data Enrichment API
           </h1>
 
-          <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            B2B Data Enrichment platform to enhance your business data accuracy
-            and insights.
+          <p className="text-muted-foreground text-md mt-5 md:text-lg lg:text-xl text-balance">
+            Access 550M+ business contacts with real-time intent data. Power your AI Agents and apps with 250+ data points per prospect.
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4">
@@ -37,17 +47,14 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+      
+      <div className="container mt-0">
+         <HeroIllustration />
+      </div>
 
-      {/*<div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
-        <div className="relative h-[793px] w-full">
-          <Image
-            src="/hero.webp"
-            alt="hero"
-            fill
-            className="rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
-          />
-        </div>
-      </div>*/}
+      <div className="container mt-10">
+        <HeroStats />
+      </div>
     </section>
   );
 };

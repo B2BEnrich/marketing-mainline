@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import type { Metadata } from "next";
 
 import { Footer } from "@/components/blocks/footer";
-import { FooterPricing } from "@/components/blocks/footer-pricing";
 import { Navbar } from "@/components/blocks/navbar";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -143,21 +142,20 @@ export default function RootLayout({
       <body className={`${dmSans.variable} ${inter.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <StyleGlideProvider />
           <Navbar />
-          <div className="mx-4 md:mx-8 lg:mx-12 xl:mx-16">
+          <div className="mx-2 md:mx-8 lg:mx-12 xl:mx-16">
             <div className="border-border border-x">
               <main className="">{children}</main>
             </div>
           </div>
-          <div className="bg-secondary-foreground">
-            <div className="mx-4 md:mx-8 lg:mx-12 xl:mx-16">
+          <div className="bg-background">
+            <div className="mx-2 md:mx-8 lg:mx-12 xl:mx-16">
               <div className="border-border/20 border-x">
-                <FooterPricing />
                 <Footer />
               </div>
             </div>

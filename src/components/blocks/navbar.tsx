@@ -71,7 +71,7 @@ export const Navbar = () => {
       )}
     >
       <div className="mx-4 md:mx-8 lg:mx-12 xl:mx-16">
-        <div className="grid grid-cols-3 items-center py-3">
+        <div className="flex items-center justify-between py-3 lg:grid lg:grid-cols-3">
           <div className="justify-self-start">
             <Link href="/" className="flex shrink-0 items-center gap-2">
               <Image
@@ -134,7 +134,7 @@ export const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* Auth Buttons */}
+          {/* Desktop: Auth Buttons and Theme Toggle / Mobile: Theme Toggle and Menu */}
           <div className="flex items-center gap-2.5 justify-self-end">
             <ThemeToggle />
             <Link
@@ -154,7 +154,7 @@ export const Navbar = () => {
               </Button>
             </Link>
 
-            {/* Hamburger Menu Button (Mobile Only) */}
+            {/* Mobile: Hamburger Menu Button */}
             <button
               className="text-muted-foreground relative flex size-8 lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
