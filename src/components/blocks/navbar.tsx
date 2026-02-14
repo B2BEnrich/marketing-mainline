@@ -121,27 +121,30 @@ export const Navbar = () => {
 
               {/* Docs Link */}
               <NavigationMenuItem>
-                <Link href="https://docs.b2benrich.com" legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
+                <NavigationMenuLink asChild>
+                  <Link href="https://docs.b2benrich.com" className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
                     Docs
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
               {/* Pricing Link */}
               <NavigationMenuItem>
-                <Link href="/pricing" legacyBehavior passHref>
-                  <NavigationMenuLink 
+                <NavigationMenuLink 
+                  asChild
+                  active={pathname === "/pricing"}
+                >
+                  <Link 
+                    href="/pricing"
                     className={cn(
                         navigationMenuTriggerStyle(), 
                         "bg-transparent",
                         pathname === "/pricing" && "bg-accent text-accent-foreground"
                     )}
-                    active={pathname === "/pricing"}
                   >
                     Pricing
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
             </NavigationMenuList>

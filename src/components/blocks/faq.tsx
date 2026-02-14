@@ -8,7 +8,15 @@ import {
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 
-const categories = [
+export type Category = {
+  title: string;
+  questions: {
+    question: string;
+    answer: string;
+  }[];
+};
+
+const defaultCategories: Category[] = [
   {
     title: "Data Enrichment",
     questions: [
@@ -85,10 +93,12 @@ export const FAQ = ({
   headerTag = "h2",
   className,
   className2,
+  categories = defaultCategories,
 }: {
   headerTag?: "h1" | "h2";
   className?: string;
   className2?: string;
+  categories?: Category[];
 }) => {
   return (
     <section className={cn("py-16", className)}>
