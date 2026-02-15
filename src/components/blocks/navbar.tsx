@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -17,47 +17,10 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-
-type NavDropdownItem = {
-  title: string;
-  href: string;
-  description: string;
-};
-
-type NavItem = {
-  label: string;
-  href: string;
-  dropdownItems?: NavDropdownItem[];
-};
-
-const ITEMS: NavItem[] = [
-  { label: "Docs", href: "https://docs.b2benrich.com" },
-  { label: "Pricing", href: "#pricing" },
-  /*{
-    label: "Endpoints",
-    href: "#endpoints",
-    dropdownItems: [
-      {
-        title: "Person",
-        href: "/#person-endpoints",
-        description:
-          "Mainline is built on the habits that make the best product teams successful",
-      },
-      {
-        title: "Company",
-        href: "/#company-endpoints",
-        description: "Mainline your resource allocation and execution",
-      },
-      {
-        title: "Prospector",
-        href: "/#prospector-endpoints",
-        description: "Mainline your resource allocation and execution",
-      },
-    ],
-  },*/
-];
+import { PRODUCT_LINKS, SOLUTION_LINKS } from "@/components/marketing-links";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,50 +50,103 @@ export const Navbar = () => {
           {/* Desktop Navigation */}
           <NavigationMenu className="justify-self-center max-lg:hidden">
             <NavigationMenuList>
-              {ITEMS.map((link) =>
-                link.dropdownItems ? (
-                  <NavigationMenuItem key={link.label} className="">
-                    <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent! px-1.5">
-                      {link.label}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="w-[400px] space-y-2 p-4">
-                        {link.dropdownItems.map((item) => (
-                          <li key={item.title}>
-                            <NavigationMenuLink asChild>
-                              <Link
-                                href={item.href}
-                                className="group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex items-center gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors select-none"
-                              >
-                                <div className="space-y-1.5 transition-transform duration-300 group-hover:translate-x-1">
-                                  <div className="text-sm leading-none font-medium">
-                                    {item.title}
-                                  </div>
-                                  <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-                                    {item.description}
-                                  </p>
+              
+              {/* Product Dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger 
+                  className="bg-transparent"
+                  data-active={pathname.startsWith("/products") ? "" : undefined}
+                >
+                  Product
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[600px] gap-3 p-4 md:w-[600px] md:grid-cols-2">
+                    {PRODUCT_LINKS.map((item) => (
+                      <li key={item.title}>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href={item.href}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="flex items-center gap-2">
+                                <div className="text-muted-foreground">
+                                    {item.icon}
                                 </div>
-                              </Link>
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                ) : (
-                  <NavigationMenuItem key={link.label} className="">
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        "relative bg-transparent px-1.5 text-sm font-medium transition-opacity hover:opacity-75",
-                        pathname === link.href && "text-muted-foreground",
-                      )}
-                    >
-                      {link.label}
-                    </Link>
-                  </NavigationMenuItem>
-                ),
-              )}
+                                <div className="text-sm font-medium leading-none">{item.title}</div>
+                            </div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-2">
+                              {item.description}
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Solutions Dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger 
+                    className="bg-transparent"
+                    data-active={pathname.startsWith("/solutions") ? "" : undefined}
+                >
+                  Solutions
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4">
+                    {SOLUTION_LINKS.map((item) => (
+                      <li key={item.title}>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href={item.href}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                             <div className="flex items-center gap-2">
+                                <div className="text-muted-foreground">
+                                    {item.icon}
+                                </div>
+                                <div className="text-sm font-medium leading-none">{item.title}</div>
+                            </div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-2">
+                              {item.description}
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Docs Link */}
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="https://docs.b2benrich.com" className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
+                    Docs
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              {/* Pricing Link */}
+              <NavigationMenuItem>
+                <NavigationMenuLink 
+                  asChild
+                  active={pathname === "/pricing"}
+                >
+                  <Link 
+                    href="/pricing"
+                    className={cn(
+                        navigationMenuTriggerStyle(), 
+                        "bg-transparent",
+                        pathname === "/pricing" && "bg-accent text-accent-foreground"
+                    )}
+                  >
+                    Pricing
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
             </NavigationMenuList>
           </NavigationMenu>
 
@@ -188,73 +204,115 @@ export const Navbar = () => {
             : "invisible -translate-y-4 opacity-0",
         )}
       >
-        <nav className="divide-border flex flex-1 flex-col divide-y">
-          {ITEMS.map((link) =>
-            link.dropdownItems ? (
-              <div key={link.label} className="py-4 first:pt-0 last:pb-0">
-                <button
-                  onClick={() =>
-                    setOpenDropdown(
-                      openDropdown === link.label ? null : link.label,
-                    )
-                  }
-                  className="text-primary flex w-full items-center justify-between text-base font-medium"
-                >
-                  {link.label}
-                  <ChevronRight
+        <nav className="divide-border flex flex-1 flex-col divide-y overflow-y-auto max-h-[80vh]">
+          {/* Mobile Product */}
+          <div className="py-4 first:pt-0">
+             <button
+                onClick={() => setOpenDropdown(openDropdown === "Product" ? null : "Product")}
+                className="text-primary flex w-full items-center justify-between text-base font-medium"
+             >
+                Product
+                <ChevronRight
                     className={cn(
                       "size-4 transition-transform duration-200",
-                      openDropdown === link.label ? "rotate-90" : "",
+                      openDropdown === "Product" ? "rotate-90" : "",
                     )}
-                  />
-                </button>
-                <div
-                  className={cn(
-                    "overflow-hidden transition-all duration-300",
-                    openDropdown === link.label
-                      ? "mt-4 max-h-[1000px] opacity-100"
-                      : "max-h-0 opacity-0",
-                  )}
-                >
-                  <div className="bg-muted/50 space-y-3 rounded-lg p-4">
-                    {link.dropdownItems.map((item) => (
-                      <Link
-                        key={item.title}
-                        href={item.href}
-                        className="group hover:bg-accent block rounded-md p-2 transition-colors"
-                        onClick={() => {
-                          setIsMenuOpen(false);
-                          setOpenDropdown(null);
-                        }}
-                      >
-                        <div className="transition-transform duration-200 group-hover:translate-x-1">
-                          <div className="text-primary font-medium">
-                            {item.title}
-                          </div>
-
-                          <p className="text-muted-foreground mt-1 text-sm">
-                            {item.description}
-                          </p>
-                        </div>
-                      </Link>
+                />
+             </button>
+             <div className={cn(
+                "overflow-hidden transition-all duration-300",
+                openDropdown === "Product" ? "mt-4 max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+             )}>
+                <div className="bg-muted/50 space-y-3 rounded-lg p-4">
+                    {PRODUCT_LINKS.map(item => (
+                         <Link
+                            key={item.title}
+                            href={item.href}
+                            className="group hover:bg-accent block rounded-md p-2 transition-colors"
+                            onClick={() => {
+                              setIsMenuOpen(false);
+                              setOpenDropdown(null);
+                            }}
+                          >
+                             <div className="flex items-center gap-2 mb-1">
+                                {item.icon}
+                                <span className="text-primary font-medium">{item.title}</span>
+                             </div>
+                             <p className="text-muted-foreground text-sm">{item.description}</p>
+                          </Link>
                     ))}
-                  </div>
                 </div>
-              </div>
-            ) : (
-              <Link
-                key={link.label}
-                href={link.href}
-                className={cn(
-                  "text-primary hover:text-primary/80 py-4 text-base font-medium transition-colors first:pt-0 last:pb-0",
-                  pathname === link.href && "text-muted-foreground",
-                )}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ),
-          )}
+             </div>
+          </div>
+
+          {/* Mobile Solutions */}
+          <div className="py-4">
+             <button
+                onClick={() => setOpenDropdown(openDropdown === "Solutions" ? null : "Solutions")}
+                className="text-primary flex w-full items-center justify-between text-base font-medium"
+             >
+                Solutions
+                <ChevronRight
+                    className={cn(
+                      "size-4 transition-transform duration-200",
+                      openDropdown === "Solutions" ? "rotate-90" : "",
+                    )}
+                />
+             </button>
+             <div className={cn(
+                "overflow-hidden transition-all duration-300",
+                openDropdown === "Solutions" ? "mt-4 max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+             )}>
+                <div className="bg-muted/50 space-y-3 rounded-lg p-4">
+                    {SOLUTION_LINKS.map(item => (
+                         <Link
+                            key={item.title}
+                            href={item.href}
+                            className="group hover:bg-accent block rounded-md p-2 transition-colors"
+                            onClick={() => {
+                              setIsMenuOpen(false);
+                              setOpenDropdown(null);
+                            }}
+                          >
+                             <div className="flex items-center gap-2 mb-1">
+                                {item.icon}
+                                <span className="text-primary font-medium">{item.title}</span>
+                             </div>
+                             <p className="text-muted-foreground text-sm">{item.description}</p>
+                          </Link>
+                    ))}
+                </div>
+             </div>
+          </div>
+
+          <Link
+            href="https://docs.b2benrich.com"
+            className="text-primary hover:text-primary/80 py-4 text-base font-medium transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Docs
+          </Link>
+
+          <Link
+            href="/pricing"
+             className={cn(
+                "text-primary hover:text-primary/80 py-4 text-base font-medium transition-colors",
+                pathname === "/pricing" && "text-muted-foreground"
+            )}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Pricing
+          </Link>
+
+           <div className="py-4 flex flex-col gap-2">
+                <Link href="https://app.b2benrich.com/auth/sign-in">
+                    <Button variant="outline" className="w-full">Login</Button>
+                </Link>
+                <Link href="https://app.b2benrich.com/auth/sign-up">
+                    <Button variant="default" className="w-full">Signup</Button>
+                </Link>
+           </div>
+
         </nav>
       </div>
     </section>

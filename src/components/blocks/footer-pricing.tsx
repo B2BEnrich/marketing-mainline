@@ -5,19 +5,39 @@ import { useState } from "react";
 import { Check } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { GlimmeringMap } from "@/components/ui/glimmering-map";
+import { cn } from "@/lib/utils";
 
-export function FooterPricing() {
+export function FooterPricing({ 
+  headerTag = "h2",
+  showBackground = false 
+}: { 
+  headerTag?: "h1" | "h2";
+  showBackground?: boolean;
+}) {
   const [isAnnual, setIsAnnual] = useState(false);
 
   // Calculate prices based on billing period
   const starterPrice = isAnnual ? Math.round(49 * 10) : 49;
   const growPrice = isAnnual ? Math.round(149 * 10) : 149;
 
+  const HeaderTag = headerTag;
+
   return (
-    <section id="pricing" className="py-16 md:py-24">
-      <div className="container">
+    <section 
+      id="pricing" 
+      className={cn(
+        "relative overflow-hidden py-16 md:py-24"
+      )}
+    >
+      {showBackground && (
+        <div className="absolute inset-0 z-0 pointer-events-none top-20">
+          <GlimmeringMap className="h-full w-full object-cover" />
+        </div>
+      )}
+      <div className="container relative z-10">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-4xl md:text-5xl font-semibold tracking-tight text-foreground">Pricing</h2>
+          <HeaderTag className="mb-4 text-4xl md:text-5xl font-semibold tracking-tight text-foreground">B2Benrich Pricing</HeaderTag>
           <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card px-4 py-2">
             <span className={`text-sm font-medium transition-colors ${!isAnnual ? 'text-foreground' : 'text-muted-foreground'}`}>Monthly</span>
             <button
