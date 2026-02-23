@@ -5,7 +5,9 @@ import {
   Search, 
   Database, 
   Sparkles, 
-  Download 
+  Download,
+  RefreshCw,
+  Cpu,
 } from "lucide-react";
 
 export const PRODUCT_LINKS = [
@@ -57,7 +59,25 @@ export const SOLUTION_LINKS = [
   {
     title: "Data Extraction",
     href: "/solutions/data-extraction",
-    description: "Extract data from LinkedIn and other sources at scale",
+    description: "Extract B2B people and company data at scale via API",
     icon: <Download className="size-5" />,
+  },
+  {
+    title: "B2B Database",
+    href: "/solutions/b2b-database",
+    description: "Access 550M+ contacts and 50M+ companies via API",
+    icon: <Database className="size-5" />,
+  },
+  {
+    title: "CRM Data Enrichment",
+    href: "/solutions/crm-data-enrichment",
+    description: "Enrich HubSpot, Salesforce, and Clay records automatically",
+    icon: <RefreshCw className="size-5" />,
+  },
+  {
+    title: "Technographic Data",
+    href: "/solutions/b2b-technographic-data",
+    description: "Discover what technology every company uses",
+    icon: <Cpu className="size-5" />,
   },
 ];

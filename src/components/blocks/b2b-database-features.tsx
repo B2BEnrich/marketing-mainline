@@ -1,0 +1,204 @@
+"use client";
+
+import { useState } from "react";
+import { Check, Copy, Database, Users, Globe, type LucideIcon } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
+import { CodeBlockCode } from "@/components/ui/code-block";
+import { ArrowRight } from "lucide-react";
+
+const CONTACT_SEARCH_CODE = `curl --request POST \\
+  --url https://api.b2benrich.com/v1/search/people \\
+  --header 'Content-Type: application/json' \\
+  --header 'X-Api-Key: YOUR_API_KEY' \\
+  --data '{
+  "job_title": "VP of Sales",
+  "company_employees_range": "51-200",
+  "country_code": "US",
+  "page": 1
+}'
+# Returns: 550M+ B2B contacts with verified emails`;
+
+const COMPANY_SEARCH_CODE = `curl --request POST \\
+  --url https://api.b2benrich.com/v1/search/companies \\
+  --header 'Content-Type: application/json' \\
+  --header 'X-Api-Key: YOUR_API_KEY' \\
+  --data '{
+  "industry": "Software",
+  "employees_range": "51-200",
+  "hq_country": "US",
+  "revenue_range": "1M-10M"
+}'
+# Returns: 50M+ B2B companies with firmographic data`;
+
+const EMAIL_LOOKUP_CODE = `curl --request POST \\
+  --url https://api.b2benrich.com/v1/enrich/person/name-domain-to-email \\
+  --header 'Content-Type: application/json' \\
+  --header 'X-Api-Key: YOUR_API_KEY' \\
+  --data '{
+  "first_name": "John",
+  "last_name": "Smith",
+  "domain": "acme.com"
+}'
+# Returns: { "status": "success", "email": "john.smith@acme.com" }`;
+
+interface FeatureSectionProps {
+  title: string;
+  description: string;
+  features: string[];
+  icon: LucideIcon;
+  code: string;
+  language: string;
+  badge: string;
+  link: string;
+  linkText: string;
+  align?: "left" | "right";
+}
+
+const FeatureSection = ({
+  title,
+  description,
+  features,
+  icon: Icon,
+  code,
+  language,
+  badge,
+  link,
+  linkText,
+  align = "left",
+}: FeatureSectionProps) => {
+  const [copied, setCopied] = useState(false);
+  const { resolvedTheme } = useTheme();
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(code);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center py-16 lg:py-24 border-b border-border/40 last:border-0">
+      <div className={`lg:col-span-5 flex flex-col gap-8 ${align === "right" ? "lg:order-last" : ""}`}>
+        <div className="space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+              <Icon className="size-5 text-primary" />
+            </div>
+            <span className="text-sm font-semibold text-primary uppercase tracking-wider">{badge}</span>
+          </div>
+          <div className="space-y-4">
+            <h3>{title}</h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">{description}</p>
+          </div>
+          <ul className="space-y-3">
+            {features.map((feature, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <Check className="size-5 text-primary shrink-0 mt-0.5" />
+                <span className="text-foreground/80">{feature}</span>
+              </li>
+            ))}
+          </ul>
+          <Button asChild variant="outline" className="mt-4">
+            <a href={link}>
+              {linkText} <ArrowRight className="ml-2 size-4" />
+            </a>
+          </Button>
+        </div>
+      </div>
+
+      <div className="lg:col-span-7">
+        <div className="rounded-xl border bg-card shadow-sm overflow-hidden">
+          <div className="flex items-center justify-between gap-2 px-4 py-2 border-b bg-card">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-primary/10 text-primary">
+                POST
+              </span>
+              <span className="text-xs text-muted-foreground font-mono">Example Request</span>
+            </div>
+          </div>
+          <div className="relative group">
+            <div className="overflow-auto bg-background p-4">
+              <CodeBlockCode
+                code={code}
+                language={language}
+                theme={resolvedTheme === "dark" ? "github-dark" : "github-light"}
+                className="text-xs md:text-sm font-mono"
+              />
+            </div>
+            <span className="absolute top-2 right-3 text-[11px] font-mono text-muted-foreground/60 pointer-events-none uppercase">
+              {language}
+            </span>
+            <button
+              onClick={handleCopy}
+              className="absolute top-2 right-2 size-8 p-2 opacity-0 group-hover:opacity-100 inline-flex items-center justify-center rounded-md border bg-background shadow-sm hover:bg-accent transition-all"
+            >
+              {copied ? (
+                <Check className="size-4 text-green-600" />
+              ) : (
+                <Copy className="size-4" />
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const B2BDatabaseFeatures = () => {
+  return (
+    <section className="container">
+      <FeatureSection
+        badge="B2B Contact Database"
+        title="Search 550M+ B2B contacts in our contact database"
+        description="Query our B2B contact database by job title, seniority, location, and company attributes. Returns verified emails and full professional profiles — the most comprehensive B2B contact database available via API."
+        features={[
+          "550M+ verified professional profiles",
+          "Filter by job title, function, and seniority level",
+          "Verified email addresses included",
+          "GDPR-compliant B2B contact data",
+        ]}
+        icon={Users}
+        code={CONTACT_SEARCH_CODE}
+        language="bash"
+        link="/products/people-search"
+        linkText="Explore People Search API"
+      />
+
+      <FeatureSection
+        badge="B2B Company Database"
+        title="Access 50M+ companies across every industry"
+        description="Our B2B company database covers 50M+ companies worldwide. Filter by industry, revenue range, employee count, location, and technology stack. The data vendors alternative that gives you full API access."
+        features={[
+          "50M+ companies with firmographic data",
+          "Revenue range, employee count, and funding data",
+          "Industry classification and HQ location",
+          "Technology stack for every company",
+        ]}
+        icon={Globe}
+        code={COMPANY_SEARCH_CODE}
+        language="bash"
+        link="/products/company-search"
+        linkText="Explore Company Search API"
+        align="right"
+      />
+
+      <FeatureSection
+        badge="Email Finder"
+        title="Find business emails from name and company domain"
+        description="Turn any name and company domain into a verified business email address. Our email lookup API covers hundreds of millions of professionals — the fastest way to build verified B2B email databases."
+        features={[
+          "Name + domain to verified email address",
+          "Real-time email verification included",
+          "High coverage across all company sizes",
+          "1 credit per successful lookup",
+        ]}
+        icon={Database}
+        code={EMAIL_LOOKUP_CODE}
+        language="bash"
+        link="/products/people-enrichment"
+        linkText="Explore People Enrichment API"
+      />
+    </section>
+  );
+};

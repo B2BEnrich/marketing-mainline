@@ -94,7 +94,7 @@ export const Navbar = () => {
                   Solutions
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4">
+                  <ul className="grid w-[600px] gap-3 p-4 md:grid-cols-2">
                     {SOLUTION_LINKS.map((item) => (
                       <li key={item.title}>
                         <NavigationMenuLink asChild>
