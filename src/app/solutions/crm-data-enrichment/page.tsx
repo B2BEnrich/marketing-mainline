@@ -4,12 +4,12 @@ import { SolutionHero } from "@/components/blocks/solution-hero";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
-import { crmDataEnrichmentFAQ } from "@/lib/faq-data";
+import { crmEnrichmentFAQ } from "@/lib/faq-data";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
-const CrmEnrichmentFeatures = React.lazy(() =>
+const CRMEnrichmentFeatures = React.lazy(() =>
   import("@/components/blocks/crm-enrichment-features").then((m) => ({
-    default: m.CrmEnrichmentFeatures,
+    default: m.CRMEnrichmentFeatures,
   })),
 );
 
@@ -187,7 +187,7 @@ export default function CrmDataEnrichmentPage() {
           },
         ]}
       />
-      <FAQSchema items={flattenCategories(crmDataEnrichmentFAQ)} />
+      <FAQSchema items={flattenCategories(crmEnrichmentFAQ)} />
       <SoftwareAppSchema
         name="B2BEnrich CRM Data Enrichment"
         description="Automate CRM data enrichment for HubSpot, Salesforce, and Pipedrive. Keep CRM records fresh with verified contact data and company insights."
@@ -200,7 +200,7 @@ export default function CrmDataEnrichmentPage() {
         title="CRM Data Enrichment — HubSpot & Salesforce"
         description="Automate CRM data enrichment for HubSpot, Salesforce, and Pipedrive. Keep your CRM records fresh with verified contact data, company insights, and real-time updates through native integrations."
         showIllustration={true}
-        illustrationPreset="crm-enrichment"
+        illustrationPreset="company-enrichment"
       />
 
       <LazySection
@@ -208,7 +208,7 @@ export default function CrmDataEnrichmentPage() {
         rootMargin="200px 0px"
       >
         <React.Suspense fallback={<CrmEnrichmentFeaturesSkeleton />}>
-          <CrmEnrichmentFeatures />
+          <CRMEnrichmentFeatures />
         </React.Suspense>
       </LazySection>
 
@@ -232,7 +232,7 @@ export default function CrmDataEnrichmentPage() {
 
       <LazySection fallback={<FAQSkeleton />} rootMargin="200px 0px">
         <React.Suspense fallback={<FAQSkeleton />}>
-          <FAQ categories={crmDataEnrichmentFAQ} />
+          <FAQ categories={crmEnrichmentFAQ} />
         </React.Suspense>
       </LazySection>
     </>

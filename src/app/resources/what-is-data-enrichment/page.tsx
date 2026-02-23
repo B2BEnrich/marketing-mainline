@@ -24,6 +24,7 @@ export const metadata = generatePageMetadata({
 
 export default function WhatIsDataEnrichmentPage() {
   return (
+    <>
     <article className="max-w-4xl mx-auto px-4 py-16 lg:py-24">
 
       {/* Header */}
@@ -341,5 +342,6 @@ export default function WhatIsDataEnrichmentPage() {
       ]}
     />
     <FAQSchema items={flattenCategories(resourcesDataEnrichmentFAQ)} />
+    </>
   );
 }

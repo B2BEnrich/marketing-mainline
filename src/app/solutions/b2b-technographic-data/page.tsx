@@ -207,7 +207,7 @@ export default function B2BTechnographicDataPage() {
         title="B2B Technographic Data — Technology Stack Intelligence"
         description="Access comprehensive technographic data for 50M+ companies. Discover complete technology stacks, software usage patterns, and tech adoption signals for precision targeting and competitive intelligence."
         showIllustration={true}
-        illustrationPreset="technographic-data"
+        illustrationPreset="company-enrichment"
       />
 
       <LazySection
