@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ArrowRight, CheckCircle, BookOpen, Lightbulb, BarChart3, Database, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FAQ } from "@/components/blocks/faq";
+import { resourcesDataEnrichmentFAQ } from "@/lib/faq-data";
 
 export const metadata: Metadata = {
   title: "What Is Data Enrichment? A Complete Guide",
@@ -314,5 +316,6 @@ export default function WhatIsDataEnrichmentPage() {
         </div>
       </div>
     </article>
+    <FAQ categories={resourcesDataEnrichmentFAQ} />
   );
 }

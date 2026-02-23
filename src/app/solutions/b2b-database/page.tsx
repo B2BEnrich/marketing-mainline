@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { b2bDatabaseFAQ } from "@/lib/faq-data";
 import { SolutionHero } from "@/components/blocks/solution-hero";
 import { B2BDatabaseFeatures } from "@/components/blocks/b2b-database-features";
 import { RelatedProducts } from "@/components/blocks/related-products";
@@ -33,7 +34,7 @@ export default function B2BDatabasePage() {
 
       <FooterPricing />
 
-      <FAQ />
+      <FAQ categories={b2bDatabaseFAQ} />
     </>
   );
 }

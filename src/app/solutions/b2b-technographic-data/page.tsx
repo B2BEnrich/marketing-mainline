@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { technographicDataFAQ } from "@/lib/faq-data";
 import { SolutionHero } from "@/components/blocks/solution-hero";
 import { TechnographicDataFeatures } from "@/components/blocks/technographic-data-features";
 import { RelatedProducts } from "@/components/blocks/related-products";
@@ -33,7 +34,7 @@ export default function B2BTechnographicDataPage() {
 
       <FooterPricing />
 
-      <FAQ />
+      <FAQ categories={technographicDataFAQ} />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { validationFAQ } from "@/lib/faq-data";
 import { SolutionHero } from "@/components/blocks/solution-hero";
 import { ValidationFeatures } from "@/components/blocks/validation-features";
 import { RelatedProducts } from "@/components/blocks/related-products";
@@ -33,7 +34,7 @@ export default function ValidationPage() {
 
       <FooterPricing />
 
-      <FAQ />
+      <FAQ categories={validationFAQ} />
     </>
   );
 }

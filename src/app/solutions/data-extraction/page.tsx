@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { dataExtractionFAQ } from "@/lib/faq-data";
 import { SolutionHero } from "@/components/blocks/solution-hero";
 import { EnrichmentData } from "@/components/blocks/enrichment-data";
 import { DataExtractionFeatures } from "@/components/blocks/data-extraction-features";
@@ -38,7 +39,7 @@ export default function DataExtractionPage() {
 
       <FooterPricing />
 
-      <FAQ />
+      <FAQ categories={dataExtractionFAQ} />
     </>
   );
 }

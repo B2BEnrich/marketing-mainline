@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { prospectorFAQ } from "@/lib/faq-data";
 import { SolutionHero } from "@/components/blocks/solution-hero";
 import { ProspectorFeatures } from "@/components/blocks/prospector-features";
 import { RelatedProducts } from "@/components/blocks/related-products";
@@ -33,7 +34,7 @@ export default function ProspectorPage() {
 
       <FooterPricing />
 
-      <FAQ />
+      <FAQ categories={prospectorFAQ} />
     </>
   );
 }

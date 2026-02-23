@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { crmEnrichmentFAQ } from "@/lib/faq-data";
 import { SolutionHero } from "@/components/blocks/solution-hero";
 import { CRMEnrichmentFeatures } from "@/components/blocks/crm-enrichment-features";
 import { RelatedProducts } from "@/components/blocks/related-products";
@@ -33,7 +34,7 @@ export default function CRMDataEnrichmentPage() {
 
       <FooterPricing />
 
-      <FAQ />
+      <FAQ categories={crmEnrichmentFAQ} />
     </>
   );
 }

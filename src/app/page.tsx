@@ -5,6 +5,7 @@ import { FAQ } from "@/components/blocks/faq";
 import { FooterPricing } from "@/components/blocks/footer-pricing";
 import { Hero } from "@/components/blocks/hero";
 import { HowCreditsWork } from "@/components/blocks/how-credits-work";
+import { homeFAQ } from "@/lib/faq-data";
 
 export const metadata: Metadata = {
   title: "B2B Data Enrichment API — 550M+ Contacts & Companies",
@@ -36,7 +37,7 @@ export default function Home() {
 
       <HowCreditsWork />
 
-      <FAQ />
+      <FAQ categories={homeFAQ} />
     </>
   );
 }

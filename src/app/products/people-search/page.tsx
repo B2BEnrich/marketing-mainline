@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { peopleSearchFAQ } from "@/lib/faq-data";
 import { SolutionHero } from "@/components/blocks/solution-hero";
 import { PeopleSearchFeatures } from "@/components/blocks/people-search-features";
 import { RelatedProducts } from "@/components/blocks/related-products";
@@ -33,7 +34,7 @@ export default function PeopleSearchPage() {
 
       <FooterPricing />
 
-      <FAQ />
+      <FAQ categories={peopleSearchFAQ} />
     </>
   );
 }

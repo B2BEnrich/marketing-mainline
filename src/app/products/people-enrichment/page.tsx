@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { peopleEnrichmentFAQ } from "@/lib/faq-data";
 import { SolutionHero } from "@/components/blocks/solution-hero";
 import { PeopleEnrichmentFeatures } from "@/components/blocks/people-enrichment-features";
 import { RelatedProducts } from "@/components/blocks/related-products";
@@ -33,7 +34,7 @@ export default function PeopleEnrichmentPage() {
 
       <FooterPricing />
 
-      <FAQ />
+      <FAQ categories={peopleEnrichmentFAQ} />
     </>
   );
 }
