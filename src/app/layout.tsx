@@ -1,10 +1,13 @@
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import { Footer } from "@/components/blocks/footer";
 import { Navbar } from "@/components/blocks/navbar";
+import { CriticalCSS } from "@/components/optimization/critical-css";
+import { DeferredScripts } from "@/components/scripts/deferred-scripts";
+import { OrganizationSchema } from "@/components/seo/organization-schema";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
@@ -54,12 +57,33 @@ const dmSans = localFont({
   ],
   variable: "--font-dm-sans",
   display: "swap",
+  adjustFontFallback: false,
 });
 
 const inter = Inter({
   subsets: ["latin"],
+  display: "optional",
   variable: "--font-inter",
+  adjustFontFallback: true,
+  preload: true,
+  fallback: [
+    "system-ui",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Arial",
+    "sans-serif",
+  ],
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://b2benrich.com"),
@@ -92,6 +116,7 @@ export const metadata: Metadata = {
   authors: [{ name: "B2BEnrich" }],
   creator: "B2BEnrich",
   publisher: "B2BEnrich",
+  manifest: "/manifest",
   robots: {
     index: true,
     follow: true,
@@ -101,33 +126,52 @@ export const metadata: Metadata = {
       { url: "/favicon/favicon.ico", sizes: "48x48" },
       { url: "/favicon/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon/favicon.ico" },
     ],
     apple: [{ url: "/favicon/apple-touch-icon.png", sizes: "180x180" }],
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "B2BEnrich",
-    description:
-      "Accurate and fast B2B data enrichment platform to enhance your business data quality and insights.",
+    type: "website",
+    locale: "en_US",
     siteName: "B2BEnrich",
+    title: "B2BEnrich — B2B Data Enrichment API",
+    description:
+      "B2B data enrichment API — enrich contacts and companies with 250+ data points. Access 550M+ profiles and 50M+ companies.",
+    url: "https://b2benrich.com",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "B2BEnrich - Accurate and fast B2B data enrichment platform",
+        alt: "B2BEnrich — B2B Data Enrichment API",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "B2BEnrich",
+    title: "B2BEnrich — B2B Data Enrichment API",
     description:
-      "Accurate and fast B2B data enrichment platform to enhance your business data quality and insights.",
-    images: ["/og-image.jpg"],
+      "B2B data enrichment API — enrich contacts and companies with 250+ data points. Access 550M+ profiles and 50M+ companies.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "B2BEnrich — B2B Data Enrichment API",
+      },
+    ],
     creator: "@b2benrich",
+  },
+  other: {
+    "ai:keywords":
+      "B2B data enrichment API, b2b data api, lead enrichment, company enrichment, email verification API, b2b database, b2b contact database, CRM data enrichment",
+    "ai:category": "B2B Data & Sales Intelligence API",
+    "ai:primary-function":
+      "Real-time REST API that enriches business contacts and companies with 250+ verified data points from a database of 550M+ profiles and 50M+ companies.",
+    "ai:target-audience":
+      "Developers, product engineers, sales ops teams, and growth teams who need programmatic access to B2B contact and company data",
+    "ai:key-features":
+      "People enrichment, company enrichment, email verification, email finder, phone validation, people search, company search, B2B prospecting with 30+ filters",
   },
 };
 
@@ -139,6 +183,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <CriticalCSS />
+        <OrganizationSchema />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <script
           async
           crossOrigin="anonymous"
@@ -167,8 +215,8 @@ export default function RootLayout({
             </div>
           </div>
         </ThemeProvider>
+        <DeferredScripts />
       </body>
     </html>
   );
 }
-//<Separator className="my-0 h-px" />

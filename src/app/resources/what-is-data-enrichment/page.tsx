@@ -1,19 +1,26 @@
-import type { Metadata } from "next";
 import { ArrowRight, CheckCircle, BookOpen, Lightbulb, BarChart3, Database, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FAQ } from "@/components/blocks/faq";
 import { resourcesDataEnrichmentFAQ } from "@/lib/faq-data";
+import { generatePageMetadata, flattenCategories } from "@/lib/seo";
+import { ArticleSchema } from "@/components/seo/article-schema";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { FAQSchema } from "@/components/seo/faq-schema";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "What Is Data Enrichment? A Complete Guide",
   description:
     "Learn what data enrichment is, how it works, and the best techniques and tools for B2B use cases. Covers CRM enrichment, contact data enrichment, data enrichment examples, and best practices for enriching B2B account data.",
-  openGraph: {
-    title: "What Is Data Enrichment? A Complete Guide | B2BEnrich",
-    description:
-      "Learn what data enrichment is, how it works, and the best techniques and tools for B2B use cases. Covers CRM enrichment, contact data enrichment, and best practices.",
-  },
-};
+  path: "/resources/what-is-data-enrichment",
+  keywords: [
+    "what is data enrichment",
+    "data enrichment examples",
+    "data enrichment best practices",
+    "data enrichment techniques",
+    "data enrichment services",
+    "enrich the data",
+  ],
+});
 
 export default function WhatIsDataEnrichmentPage() {
   return (
@@ -317,5 +324,22 @@ export default function WhatIsDataEnrichmentPage() {
       </div>
     </article>
     <FAQ categories={resourcesDataEnrichmentFAQ} />
+    <ArticleSchema
+      title="What Is Data Enrichment? A Complete Guide"
+      description="Learn what data enrichment is, how it works, and the best techniques and tools for B2B use cases."
+      publishedAt="2026-02-22"
+      url="https://b2benrich.com/resources/what-is-data-enrichment"
+    />
+    <BreadcrumbSchema
+      items={[
+        { name: "Home", url: "https://b2benrich.com/" },
+        { name: "Resources", url: "https://b2benrich.com/resources" },
+        {
+          name: "What Is Data Enrichment?",
+          url: "https://b2benrich.com/resources/what-is-data-enrichment",
+        },
+      ]}
+    />
+    <FAQSchema items={flattenCategories(resourcesDataEnrichmentFAQ)} />
   );
 }

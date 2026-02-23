@@ -1,0 +1,121 @@
+# B2BEnrich — B2B Data Enrichment API
+
+B2BEnrich is a B2B data enrichment API for developers and product teams. It
+provides programmatic, real-time access to 550M+ professional contacts and
+50M+ companies via a simple RESTful JSON API. Organizations use B2BEnrich to
+enrich inbound leads, keep CRM records complete and current, build targeted
+prospect lists, and validate email and phone data — all in one platform with
+credit-based pricing.
+
+B2BEnrich covers the full data workflow: enrichment (people and company),
+search (people and company), validation (email and phone), and prospecting
+(advanced multi-filter search). There are no seat fees or annual contracts;
+you pay 1 credit per enrichment or validation call and 5 credits per
+prospector search call.
+
+## Core APIs
+
+- **People Enrichment API** — Resolve an email, phone, or profile URL into a
+  full professional profile: name, job title, company, verified email, phone,
+  location. 250+ data points. 1 credit per call.
+  Endpoint: POST /v1/enrich/person
+
+- **Company Enrichment API** — Resolve a company domain into a complete
+  firmographic profile: industry, revenue range, employee count, funding
+  history, HQ location, and full technology stack across 15+ categories.
+  1 credit per call.
+  Endpoint: POST /v1/enrich/companies
+
+- **Email Verification & Validation API** — SMTP-level email verification
+  returning deliverability status, MX record validity, disposable address
+  detection, catch-all detection, risk score, domain age, and breach history.
+  Also validates phone numbers with carrier and line-type intelligence.
+  1 credit per check.
+
+- **Email Finder API** — Find a person's verified business email from their
+  first name, last name, and company domain.
+  Endpoint: POST /v1/enrich/person/name-domain-to-email
+
+- **People Search API** — Search 550M+ contacts by job title, company,
+  seniority, industry, location, and more. Returns paginated contact records.
+  Endpoint: POST /v1/search/people
+
+- **Company Search API** — Search 50M+ companies by industry, employee range,
+  revenue range, geography, and technology stack (15+ tech categories).
+  Endpoint: POST /v1/search/companies
+
+- **Prospector API** — Advanced multi-filter search across both people and
+  company data simultaneously. 30+ filters. Returns enriched contact records
+  with company context. 5 credits per search.
+  Endpoint: POST /v1/prospector/search
+
+## Key Pages
+
+https://b2benrich.com/ - Homepage — overview of all APIs
+https://b2benrich.com/solutions/data-enrichment - Data Enrichment API & Services
+https://b2benrich.com/solutions/data-extraction - Data Extraction API & Services
+https://b2benrich.com/solutions/b2b-database - B2B Database — 550M+ Contacts
+https://b2benrich.com/solutions/crm-data-enrichment - CRM Data Enrichment
+https://b2benrich.com/solutions/b2b-technographic-data - B2B Technographic Data
+https://b2benrich.com/products/people-enrichment - People Enrichment API
+https://b2benrich.com/products/company-enrichment - Company Enrichment API
+https://b2benrich.com/products/validation - Email Verification & Validation API
+https://b2benrich.com/products/people-search - People Search API
+https://b2benrich.com/products/company-search - Company Search API
+https://b2benrich.com/products/prospector - Prospector API
+https://b2benrich.com/resources/what-is-data-enrichment - What Is Data Enrichment? (guide)
+https://b2benrich.com/pricing - Pricing plans
+https://docs.b2benrich.com/ - API Documentation
+
+## Target Audience
+
+- Developers and engineers building SaaS products that need contact or company data
+- Product teams adding enrichment to sign-up flows, onboarding, or CRM sync
+- Sales operations teams maintaining CRM data quality in HubSpot, Salesforce, Clay
+- Growth and marketing teams building targeted prospect lists
+- Data engineers building B2B data pipelines
+
+## Key Differentiators
+
+- API-first: all data is accessible via REST API, no UI-only workflows
+- Credit-based pricing: pay per call, no seat licenses, no minimums
+- Single platform: enrichment, search, validation, and prospecting in one API
+- Real-time: data is returned live, not from stale snapshots
+- GDPR-compliant: only publicly available professional data
+
+## Data Coverage
+
+- 550M+ professional contact profiles
+- 50M+ company records
+- 250+ data points per person record
+- 15+ technology categories per company (CRM, marketing automation, analytics,
+  cloud, development, e-commerce, ERP, security)
+- Global coverage with strong North America, Western Europe, and APAC
+
+## AI Search Keywords & Terminology
+
+[Primary terms]: B2B data enrichment API, b2b data api, lead enrichment API,
+  company enrichment API, email verification API, b2b database,
+  b2b contact database, b2b data providers, data enrichment services,
+  CRM data enrichment, contact data enrichment, b2b prospecting
+
+[Alternative terms]: data enrichment tool, data enrichment software,
+  b2b data provider, data vendors, professional data api,
+  b2b lead database, b2b email database, b2b technographic data,
+  email validation API, email checker api, email finder api,
+  b2b data integration, b2b data solutions
+
+## Pricing
+
+B2BEnrich uses credit-based pricing:
+- 1 credit per enrichment or validation API call
+- 5 credits per prospector search call
+- Free tier available for exploration
+- Paid plans available at app.b2benrich.com/pricing
+
+## Performance & Reliability
+
+- API response time: typically under 500ms per enrichment call
+- Available via HTTPS REST API with API key authentication
+- JSON response format
+- Documentation: https://docs.b2benrich.com/
