@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/login", "/signup"],
       },
     ],
-    sitemap: "https://b2benrich.com/sitemap.xml",
+    sitemap: "https://www.b2benrich.com/sitemap.xml",
   };
 }
