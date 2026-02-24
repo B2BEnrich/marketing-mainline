@@ -201,6 +201,7 @@ export default function B2BDatabasePage() {
         badge="B2B DATABASE API"
         title="B2B Database — 550M+ Contacts & 50M+ Companies"
         description="The most comprehensive B2B database accessible via API. Get verified contact data, firmographic insights, and business emails from the leading B2B data provider. GDPR-compliant, real-time, and always fresh."
+        primaryCtaLink="https://docs.b2benrich.com/api/search#search-companies"
         showIllustration={true}
         illustrationPreset="people-search"
       />

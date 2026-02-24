@@ -206,6 +206,7 @@ export default function B2BTechnographicDataPage() {
         badge="TECHNOGRAPHIC DATA API"
         title="B2B Technographic Data — Technology Stack Intelligence"
         description="Access comprehensive technographic data for 50M+ companies. Discover complete technology stacks, software usage patterns, and tech adoption signals for precision targeting and competitive intelligence."
+        primaryCtaLink="https://docs.b2benrich.com/api/search#search-companies"
         showIllustration={true}
         illustrationPreset="company-enrichment"
       />

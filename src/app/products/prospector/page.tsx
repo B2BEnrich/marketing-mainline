@@ -203,6 +203,7 @@ export default function ProspectorPage() {
         badge="B2B DATA PROVIDER API"
         title="B2B Prospector API — Advanced Data Providers"
         description="Build highly targeted lead lists with 30+ filters including technology stack, revenue, and intent signals. One of the most comprehensive B2B data providers — power your prospecting with precision data."
+        primaryCtaLink="https://docs.b2benrich.com/api/search#prospector-search"
         showIllustration={true}
         illustrationPreset="prospector"
       />

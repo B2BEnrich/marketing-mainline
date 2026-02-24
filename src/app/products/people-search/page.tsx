@@ -192,6 +192,7 @@ export default function PeopleSearchPage() {
         badge="PEOPLE SEARCH API"
         title="B2B Contact Database — Find People at Any Company"
         description="Search our B2B contact database of 550M+ professionals. Discover employees and decision-makers by filtering on company, job title, seniority, and location to build targeted lead lists."
+        primaryCtaLink="https://docs.b2benrich.com/api/search#search-employees-at-a-company"
         showIllustration={true}
         illustrationPreset="people-search"
       />

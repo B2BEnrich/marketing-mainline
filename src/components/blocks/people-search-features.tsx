@@ -167,7 +167,7 @@ export const PeopleSearchFeatures = () => {
         icon={Users}
         code={COMPANY_EMPLOYEES_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/search#list-employees-at-a-company-by-domain-5-credits"
+        link="https://docs.b2benrich.com/api/search#search-employees-at-a-company"
         linkText="View Documentation"
       />
 
@@ -184,7 +184,7 @@ export const PeopleSearchFeatures = () => {
         icon={Search}
         code={COMPANY_TITLE_SEARCH_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/search#search-by-company-name-and-job-title-5-credits"
+        link="https://docs.b2benrich.com/api/search#search-by-job-title-and-company-name"
         linkText="View Documentation"
         align="right"
       />
@@ -202,7 +202,7 @@ export const PeopleSearchFeatures = () => {
         icon={UserSearch}
         code={NAME_TITLE_SEARCH_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/search#search-by-person-name-and-job-title-5-credits"
+        link="https://docs.b2benrich.com/api/search#find-a-contact-by-name-and-company-domain"
         linkText="View Documentation"
       />
     </section>

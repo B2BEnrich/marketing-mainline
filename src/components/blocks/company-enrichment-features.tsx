@@ -150,7 +150,7 @@ export const CompanyEnrichmentFeatures = () => {
         icon={Building2}
         code={LINKEDIN_TO_ORG_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/organization#linkedin-url-to-organization-1-credit-per-request"
+        link="https://docs.b2benrich.com/api/company#linked-in-url-to-company-1-credit-per-request"
         linkText="View Documentation"
         align="left"
       />
@@ -168,7 +168,7 @@ export const CompanyEnrichmentFeatures = () => {
         icon={Globe}
         code={DOMAIN_TO_ORG_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/organization#domain-to-organization-1-credit-per-request"
+        link="https://docs.b2benrich.com/api/company#domain-to-company-1-credit-per-request"
         linkText="View Documentation"
         align="right"
       />

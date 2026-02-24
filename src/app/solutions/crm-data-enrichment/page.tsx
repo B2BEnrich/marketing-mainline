@@ -199,6 +199,7 @@ export default function CrmDataEnrichmentPage() {
         badge="CRM DATA ENRICHMENT"
         title="CRM Data Enrichment — HubSpot & Salesforce"
         description="Automate CRM data enrichment for HubSpot, Salesforce, and Pipedrive. Keep your CRM records fresh with verified contact data, company insights, and real-time updates through native integrations."
+        primaryCtaLink="https://docs.b2benrich.com/api/company#domain-to-company-1-credit-per-request"
         showIllustration={true}
         illustrationPreset="company-enrichment"
       />

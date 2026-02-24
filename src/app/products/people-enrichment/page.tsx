@@ -192,6 +192,7 @@ export default function PeopleEnrichmentPage() {
         badge="PERSON ENRICHMENT API"
         title="Lead Enrichment API — Enrich & Resolve Contact Data"
         description="Turn emails, phones, and profile URLs into complete professional profiles. B2B lead enrichment API with verified contact data, work history, and company insights in real-time."
+        primaryCtaLink="https://docs.b2benrich.com/api/person#social-url-to-person-1-credit-per-request"
         showIllustration={true}
         illustrationPreset="people-enrichment"
       />

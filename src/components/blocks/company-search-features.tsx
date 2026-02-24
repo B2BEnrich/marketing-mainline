@@ -161,7 +161,7 @@ export const CompanySearchFeatures = () => {
         icon={Building2}
         code={COMPANY_SEARCH_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/search#search-companies-5-credits"
+        link="https://docs.b2benrich.com/api/search#search-companies"
         linkText="View Documentation"
       />
 
@@ -178,7 +178,7 @@ export const CompanySearchFeatures = () => {
         icon={Search}
         code={COMPANY_NAME_SEARCH_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/search#find-company-by-name-1-credit"
+        link="https://docs.b2benrich.com/api/search#search-companies-by-name-exact-or-fuzzy"
         linkText="View Documentation"
         align="right"
       />

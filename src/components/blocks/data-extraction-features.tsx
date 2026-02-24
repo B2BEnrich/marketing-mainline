@@ -204,7 +204,7 @@ export const DataExtractionFeatures = () => {
         icon={Users}
         code={EMPLOYEE_LIST_CODE}
         language="bash"
-        link="/products/employee-list"
+        link="/products/people-search"
         linkText="View Employee List API"
       />
     </section>

@@ -201,7 +201,7 @@ export const DataEnrichmentFeatures = () => {
         icon={Search}
         code={FIND_CODE}
         language="bash"
-        link="/products/find-people"
+        link="/products/people-search"
         linkText="View Find People API"
       />
     </section>

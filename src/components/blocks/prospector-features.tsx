@@ -155,7 +155,7 @@ export const ProspectorFeatures = () => {
         icon={Database}
         code={PROSPECTOR_SEARCH_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/prospector#search-prospector-database-5-credits-per-request"
+        link="https://docs.b2benrich.com/api/search#prospector-search"
         linkText="View Documentation"
       />
 
@@ -172,7 +172,7 @@ export const ProspectorFeatures = () => {
         icon={List}
         code={META_INDUSTRIES_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/meta-requests"
+        link="https://docs.b2benrich.com/api/search#search-with-ai-free-form-text-query"
         linkText="View Meta Requests Docs"
         align="right"
       />
