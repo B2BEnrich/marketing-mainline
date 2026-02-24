@@ -219,35 +219,6 @@ export const HeroIllustration = ({ preset = "default" }: HeroIllustrationProps) 
   }, [preset, samples, activeTab]);
 
   const activeSample = samples.find(s => s.id === activeTab) || samples[0];
-  const [displayedCode, setDisplayedCode] = useState("");
-
-  // Typing effect — skipped entirely for reduced-motion (Lighthouse, accessibility)
-  useEffect(() => {
-    const targetCode = activeSample.code;
-
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    if (prefersReduced) {
-      setDisplayedCode(targetCode);
-      return;
-    }
-
-    let index = 0;
-    setDisplayedCode("");
-
-    const intervalId = setInterval(() => {
-      setDisplayedCode(targetCode.slice(0, index));
-      index += 5;
-      if (index > targetCode.length) {
-        setDisplayedCode(targetCode);
-        clearInterval(intervalId);
-      }
-    }, 5);
-
-    return () => clearInterval(intervalId);
-  }, [activeTab, activeSample.code]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(activeSample.code);
@@ -323,7 +294,7 @@ export const HeroIllustration = ({ preset = "default" }: HeroIllustrationProps) 
                   </div>
                   <div className="h-[320px] overflow-y-auto bg-background/50 backdrop-blur-sm">
                     <CodeBlockCode 
-                        code={displayedCode} 
+                        code={activeSample.code} 
                         language="json"
                         theme={resolvedTheme === "dark" ? "github-dark" : "github-light"}
                         className="p-4 text-xs lg:text-sm bg-transparent"
