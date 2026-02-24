@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 export function FooterCta() {
   return (
     <section className="relative bg-background overflow-hidden pt-28 md:pt-60">
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[40%] md:translate-y-[44%] z-0 pointer-events-none w-[900px] h-[900px] md:w-[1400px] md:h-[1400px] opacity-10">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[48%] md:translate-y-[52%] z-0 pointer-events-none w-[900px] h-[900px] md:w-[1400px] md:h-[1400px] opacity-10">
         <Globe />
       </div>
 

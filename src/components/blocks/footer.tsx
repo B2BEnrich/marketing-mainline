@@ -72,7 +72,7 @@ export function Footer() {
         <div className="mt-8 border-t pt-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} B2BEnrich. All rights reserved.
+              © {new Date().getFullYear()} B2BEnrich. All rights reserved. Built in California. 🌴
             </p>
             <div className="flex flex-row items-center gap-4">
               {SOCIAL_LINKS.map((link) => (
