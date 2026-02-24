@@ -8,7 +8,7 @@ import { GlimmeringMap } from "@/components/ui/glimmering-map";
 export const Hero = () => {
   return (
     <section className="relative py-16 lg:py-32 lg:pt-28 overflow-hidden">
-      <div className="absolute inset-0 z-0 pointer-events-none md:top-48 lg:top-100 lg:scale-130">
+      <div className="absolute inset-0 z-0 pointer-events-none md:top-48 lg:top-100">
         <GlimmeringMap className="h-full w-full object-cover" />
       </div>
       
