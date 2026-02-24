@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { companyEnrichmentFAQ } from "@/lib/faq-data";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
 const CompanyEnrichmentFeatures = React.lazy(() =>
@@ -185,6 +186,18 @@ export default function CompanyEnrichmentPage() {
         description="Company enrichment API that turns domains into rich firmographic profiles — revenue, headcount, industry, tech stack, and funding data. 1 credit per call."
         url="https://b2benrich.com/products/company-enrichment"
         category="BusinessApplication"
+      />
+
+      <ContentSummary
+        title="Company Enrichment API — Firmographic Data, Tech Stack & Funding Intelligence"
+        description="B2BEnrich's company enrichment API transforms company domains into comprehensive firmographic profiles. 250+ data points including revenue, employee count, industry, funding history, HQ location, and complete technology stack. 1 credit per call."
+        keyPoints={[
+          "Firmographic Data API: Industry classification, revenue range, employee count, year founded, HQ location, and company type (public/private). 1 credit per call.",
+          "Technology Stack Detection: Detect 15+ technology categories including CRM (Salesforce, HubSpot), marketing automation, analytics, hosting, and more for technographic segmentation.",
+          "Funding and Growth Data: Total funding raised, latest funding round, investor names, and growth indicators for targeting high-growth accounts.",
+          "250+ Data Points per Company: Complete company intelligence for account scoring, ABM targeting, and CRM data enrichment workflows.",
+          "Credit-based pricing: 1 credit per enrichment call. No seat fees. Free tier available.",
+        ]}
       />
 
       <SolutionHero

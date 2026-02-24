@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { peopleEnrichmentFAQ } from "@/lib/faq-data";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
 const PeopleEnrichmentFeatures = React.lazy(() =>
@@ -186,6 +187,18 @@ export default function PeopleEnrichmentPage() {
         description="Lead enrichment API turning emails, phones, and profile URLs into complete professional profiles with 250+ data points. 1 credit per call."
         url="https://b2benrich.com/products/people-enrichment"
         category="BusinessApplication"
+      />
+
+      <ContentSummary
+        title="Lead Enrichment API — Email, Phone & LinkedIn Enrichment for B2B Contacts"
+        description="B2BEnrich's lead enrichment API transforms partial contact identifiers into complete professional profiles. 250+ data points per record including verified job title, company, seniority, work history, and social profiles. 1 credit per call."
+        keyPoints={[
+          "Email Enrichment API: Resolve any business email to a full professional profile — full name, current job title, company, seniority, department, location, phone numbers, and social media profiles. 1 credit per call.",
+          "Phone Number Enrichment: Resolve mobile and business phone numbers to complete professional records with verified emails, job titles, and company data.",
+          "LinkedIn Profile Enrichment: Turn LinkedIn profile URLs into actionable contact data with verified business emails, phone numbers, company firmographics, and work history.",
+          "250+ Data Points per Record: Verified contact and company data including work history, education, skills, and social profiles for complete lead intelligence.",
+          "Credit-based pricing: 1 credit per enrichment call. No seat fees, no minimums. Free tier available.",
+        ]}
       />
 
       <SolutionHero

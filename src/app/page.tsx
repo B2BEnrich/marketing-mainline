@@ -2,7 +2,9 @@ import * as React from "react";
 import { LazySection } from "@/components/optimization/lazy-section";
 import { Hero } from "@/components/blocks/hero";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { FAQSchema } from "@/components/seo/faq-schema";
+import { ServiceSchema } from "@/components/seo/service-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { homeFAQ } from "@/lib/faq-data";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
@@ -346,24 +348,26 @@ export default function Home() {
         url="https://b2benrich.com"
         category="BusinessApplication"
       />
+      <ServiceSchema
+        name="B2BEnrich — B2B Data Enrichment API & Services"
+        description="Real-time B2B data enrichment API for developers and product teams. Enrich contacts and companies with 250+ data points. Access 550M+ profiles via REST API. 1 credit per call."
+      />
 
-      <div className="sr-only">
-        <h2>About B2BEnrich - B2B Data Enrichment API Platform</h2>
-        <p>
-          B2BEnrich is a B2B data enrichment API for developers and product
-          teams. It provides real-time REST API access to 550M+ professional
-          contacts and 50M+ companies, returning 250+ data points per record.
-          Key capabilities: people enrichment, company enrichment, email
-          verification API, email validation API, email finder API, phone
-          validation, B2B contact database search, company search, and advanced
-          prospecting with 30+ filters. Credit-based pricing — 1 credit per
-          enrichment call, 5 credits per prospector search. GDPR-compliant data
-          enrichment services. Integrates with HubSpot, Salesforce, Clay, and
-          any system that accepts HTTP requests. Leading B2B data providers and
-          data enrichment company for contact data enrichment, lead enrichment,
-          and CRM data enrichment.
-        </p>
-      </div>
+      <ContentSummary
+        title="B2BEnrich — B2B Data Enrichment API for Developers and Product Teams"
+        description="B2BEnrich provides real-time B2B data enrichment through a simple REST API. Access 550M+ professional contacts and 50M+ companies with 250+ data points per record. Credit-based pricing — 1 credit per enrichment call, 5 credits per search. GDPR-compliant. Integrates with HubSpot, Salesforce, Clay, and any system that accepts HTTP."
+        keyPoints={[
+          "People Enrichment API: Turn emails, phones, and LinkedIn URLs into complete professional profiles — verified job title, company, seniority, location, work history, and social profiles. 1 credit per call.",
+          "Company Enrichment API: Resolve company domains into rich firmographic profiles — industry, revenue range, employee count, funding history, HQ location, and technology stack across 15+ categories. 1 credit per call.",
+          "Email Verification API: Real-time SMTP-level verification with deliverability scoring, disposable address detection, MX record validation, and breach history checks. 1 credit per check.",
+          "B2B Contact Database — People Search: Search 550M+ professional profiles by job title, company, seniority, department, and location to build targeted lead lists. 5 credits per search.",
+          "Company Search API: Query 50M+ companies by industry, revenue range, employee count, and technology stack for targeted account lists. 5 credits per search.",
+          "B2B Prospector — Advanced Filtering: Build highly targeted lead lists with 30+ filters including technology stack, revenue, intent signals, and seniority. 5 credits per prospector search.",
+          "CRM Data Enrichment: Native integrations for HubSpot, Salesforce, and Pipedrive to keep CRM records fresh automatically with verified contact and company data.",
+          "Credit-based pricing: 1 credit per enrichment or validation, 5 credits per search. No seat fees, no annual contracts. Credits never expire. Free tier available.",
+          "GDPR-compliant: Ethically sourced public professional data with full compliance for GDPR, CCPA, and data privacy regulations.",
+        ]}
+      />
 
       <div className="px-0 md:px-8 lg:px-12">
         <Hero />
