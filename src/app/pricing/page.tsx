@@ -1,9 +1,17 @@
 import React from "react";
 
+import { type Metadata } from "next";
+
 import { Background } from "@/components/background";
 import { FAQ } from "@/components/blocks/faq";
 import { FooterPricing } from "@/components/blocks/footer-pricing";
 import { HowCreditsWork } from "@/components/blocks/how-credits-work";
+
+export const metadata: Metadata = {
+  title: "Pricing – B2BEnrich",
+  description:
+    "Simple, credit-based pricing for B2BEnrich. Start free and scale as you grow — enrich contacts, validate emails, search companies, and prospect leads.",
+};
 
 const PRICING_FAQ_ITEMS = [
   {

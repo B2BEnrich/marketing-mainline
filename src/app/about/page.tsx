@@ -1,4 +1,12 @@
+import { type Metadata } from "next";
+
 import { Background } from "@/components/background";
+
+export const metadata: Metadata = {
+  title: "About – B2BEnrich",
+  description:
+    "Learn about B2BEnrich — the team building the most accurate B2B data enrichment API for sales, marketing, and revenue operations teams.",
+};
 import About from "@/components/blocks/about";
 import { AboutHero } from "@/components/blocks/about-hero";
 import { Investors } from "@/components/blocks/investors";
