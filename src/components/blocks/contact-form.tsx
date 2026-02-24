@@ -78,10 +78,10 @@ export function ContactForm() {
           >
             <Check className="size-8" />
           </motion.div>
-          <h2 className="mb-2 text-center text-2xl font-bold text-pretty">
+          <h2 className="mb-2 text-center text-pretty">
             Thank you
           </h2>
-          <p className="text-muted-foreground text-center text-lg text-pretty">
+          <p className="text-muted-foreground text-center text-pretty">
             Form submitted successfully, we will get back to you soon
           </p>
         </motion.div>

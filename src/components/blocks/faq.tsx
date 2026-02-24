@@ -110,7 +110,7 @@ export const FAQ = ({
 }) => {
   const headingText = title ?? "Got Questions?";
   const defaultDescription = (
-    <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto text-balance">
+    <p className="text-muted-foreground max-w-md lg:mx-auto text-balance">
       If you can't find what you're looking for,{" "}
       <Link href="/contact" className="underline underline-offset-4">
         get in touch
@@ -126,11 +126,11 @@ export const FAQ = ({
           {!hideHeader && (
             <div className="space-y-4">
               {headerTag === "h1" ? (
-                <h1 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+                <h1>
                   {headingText}
                 </h1>
               ) : (
-                <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground">
+                <h2 className="text-foreground">
                   {headingText}
                 </h2>
               )}

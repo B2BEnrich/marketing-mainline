@@ -120,7 +120,6 @@ export const FOOTER_LINKS: {
   {
     title: "Company",
     links: [
-      { name: "About", href: "/about" },
       { name: "Pricing", href: "/pricing" },
       { name: "FAQ", href: "/faq" },
       { name: "Contact", href: "/contact" },

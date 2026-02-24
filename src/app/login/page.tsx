@@ -29,7 +29,7 @@ const Login = () => {
                   height={18}
                   className="mb-7 dark:invert"
                 />
-                <p className="mb-2 text-2xl font-bold">Welcome back</p>
+                <h2 className="mb-2">Welcome back</h2>
                 <p className="text-muted-foreground">
                   Please enter your details.
                 </p>

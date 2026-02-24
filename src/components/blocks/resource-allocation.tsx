@@ -118,7 +118,7 @@ export const ResourceAllocation = () => {
       className="overflow-hidden pb-28 lg:pb-32"
     >
       <div className="">
-        <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="container text-center text-balance">
           Mainline your resource allocation and execution
         </h2>
 
@@ -176,7 +176,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
       )}
     >
       <div className="title-container text-balance">
-        <h3 className="inline font-semibold">{item.title} </h3>
+        <h3 className="inline">{item.title} </h3>
         <span className="text-muted-foreground"> {item.description}</span>
       </div>
 

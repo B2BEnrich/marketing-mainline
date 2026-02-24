@@ -7,10 +7,10 @@ export const DiscoveryRelatedProducts = () => {
     <section className="py-24 bg-muted/30">
       <div className="container">
         <div className="mb-12 text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl font-semibold tracking-tight text-foreground">
+          <h2 className="text-foreground">
             Related API Endpoints
           </h2>
-          <p className="text-muted-foreground mt-4 text-lg">
+          <p className="text-muted-foreground mt-4">
             Explore additional endpoints to power your product features
           </p>
         </div>

@@ -56,10 +56,10 @@ export const Pricing = ({ className }: { className?: string }) => {
     <section className={cn("py-28 lg:py-32", className)}>
       <div className="container max-w-5xl">
         <div className="space-y-4 text-center">
-          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+          <h2>
             Pricing
           </h2>
-          <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
+          <p className="text-muted-foreground mx-auto max-w-xl text-balance">
             Use Mainline for free with your whole team. Upgrade to enable
             unlimited issues, enhanced security controls, and additional
             features.
@@ -78,7 +78,7 @@ export const Pricing = ({ className }: { className?: string }) => {
             >
               <CardContent className="flex flex-col gap-7 px-6 py-5">
                 <div className="space-y-2">
-                  <h3 className="text-foreground font-semibold">{plan.name}</h3>
+                  <h3 className="text-foreground">{plan.name}</h3>
                   <div className="space-y-1">
                     <div className="text-muted-foreground text-lg font-medium">
                       {isAnnual ? plan.yearlyPrice : plan.monthlyPrice}{" "}

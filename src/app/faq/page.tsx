@@ -27,7 +27,7 @@ const Page = () => {
       {/* Page header */}
       <section className="container py-20 text-center lg:pt-36 lg:pb-4">
         <div className="mx-auto max-w-3xl space-y-4">
-          <h1 className="text-foreground text-5xl tracking-tight md:text-6xl lg:text-7xl">Frequently Asked Questions</h1>
+          <h1 className="text-foreground">Frequently Asked Questions</h1>
           <p className="text-muted-foreground">
             Everything you need to know about B2BEnrich — data enrichment, API
             integration, search, prospecting, credits, compliance, and more.

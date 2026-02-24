@@ -192,7 +192,7 @@ const PlanHeaders = ({
         <Collapsible open={isOpen} onOpenChange={setIsOpen} className="">
           <div className="flex items-center justify-between border-b py-4">
             <CollapsibleTrigger className="flex items-center gap-2">
-              <h3 className="text-2xl font-semibold">
+              <h3>
                 {pricingPlans[selectedPlan].name}
               </h3>
               <ChevronsUpDown
@@ -233,7 +233,7 @@ const PlanHeaders = ({
 
         {pricingPlans.map((plan, index) => (
           <div key={index} className="">
-            <h3 className="mb-3 text-2xl font-semibold">{plan.name}</h3>
+            <h3 className="mb-3">{plan.name}</h3>
             <Button variant={plan.button.variant} className="">
               {plan.button.text}
             </Button>
@@ -249,7 +249,7 @@ const FeatureSections = ({ selectedPlan }: { selectedPlan: number }) => (
     {comparisonFeatures.map((section, sectionIndex) => (
       <div key={sectionIndex} className="">
         <div className="border-primary/40 border-b py-4">
-          <h3 className="text-lg font-semibold">{section.category}</h3>
+          <h3>{section.category}</h3>
         </div>
         {section.features.map((feature, featureIndex) => (
           <div

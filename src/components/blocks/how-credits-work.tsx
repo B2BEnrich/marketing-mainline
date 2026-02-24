@@ -32,7 +32,7 @@ export function HowCreditsWork() {
     <section className="pb-16 md:pb-24">
       <div className="container">
         <div className="mb-12 text-center md:text-left">
-          <h3 className="mb-4 text-xl md:text-2xl font-semibold tracking-tight text-foreground">How Credits Work</h3>
+          <h3 className="mb-4 text-foreground">How Credits Work</h3>
           <p className="text-muted-foreground max-w-2xl">
             Use your credits however you like. Need more? You can renew your subscription early or switch to a higher-volume plan with a lower price per credit.
           </p>
@@ -47,7 +47,7 @@ export function HowCreditsWork() {
               <div className="mb-4 flex items-start justify-between">
                 <div className="flex items-center gap-3">
                   <item.icon className="h-6 w-6 text-primary" />
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <h5>{item.title}</h5>
                 </div>
                 <div className="rounded-full bg-primary/10 px-3 py-1">
                   <span className="text-sm font-semibold text-primary">

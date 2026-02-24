@@ -31,7 +31,7 @@ const investors = [
 export function Investors() {
   return (
     <section className="container max-w-5xl py-12">
-      <h2 className="text-foreground text-4xl font-medium tracking-wide">
+      <h2 className="text-foreground">
         Our investors
       </h2>
       <div className="mt-8 grid grid-cols-2 gap-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
@@ -44,7 +44,7 @@ export function Investors() {
               height={120}
               className="object-cover"
             />
-            <h3 className="mt-3 font-semibold">{investor.name}</h3>
+            <h3 className="mt-3">{investor.name}</h3>
             <p className="text-muted-foreground">{investor.company}</p>
           </div>
         ))}
