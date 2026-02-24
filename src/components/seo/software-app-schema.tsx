@@ -11,12 +11,11 @@ export function SoftwareAppSchema({
 }) {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "Service",
     name,
     description,
     url,
-    applicationCategory: category,
-    operatingSystem: "Web Browser",
+    serviceType: category,
     offers: {
       "@type": "Offer",
       price: "0",
@@ -26,7 +25,7 @@ export function SoftwareAppSchema({
     provider: {
       "@type": "Organization",
       name: "B2BEnrich",
-      url: "https://b2benrich.com",
+      url: "https://www.b2benrich.com",
     },
   };
 
