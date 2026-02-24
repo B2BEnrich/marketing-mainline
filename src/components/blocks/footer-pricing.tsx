@@ -37,7 +37,7 @@ export function FooterPricing({
       )}
       <div className="container relative z-10">
         <div className="mb-12 text-center">
-          <HeaderTag className="mb-4 text-4xl md:text-5xl font-semibold tracking-tight text-foreground">B2Benrich Pricing</HeaderTag>
+          <HeaderTag className="mb-4 text-foreground text-5xl tracking-tight md:text-6xl lg:text-7xl">B2Benrich Pricing</HeaderTag>
           <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card px-4 py-2">
             <span className={`text-sm font-medium transition-colors ${!isAnnual ? 'text-foreground' : 'text-muted-foreground'}`}>Monthly</span>
             <button
