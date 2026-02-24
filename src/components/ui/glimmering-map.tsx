@@ -34,34 +34,39 @@ export function GlimmeringMap({ className }: { className?: string }) {
   }, [resolvedTheme, mounted]);
 
   useEffect(() => {
-    if (svgContent) {
-      const timer = setTimeout(() => {
-        const rects = document.querySelectorAll("#map-svg rect");
+    if (!svgContent) return;
 
-        rects.forEach((rect) => {
-          const duration = Math.random() * 1.5 + 0.5; // 0.5-2 seconds (faster)
-          const delay = Math.random() * 1; // 0-1 seconds
+    // Skip animations for reduced-motion preference (Lighthouse, accessibility)
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (prefersReduced) return;
 
-          rect.setAttribute(
-            "style",
-            `
-            animation: glimmer ${duration}s ease-in-out ${delay}s infinite alternate;
-          `,
-          );
-        });
+    const timer = setTimeout(() => {
+      const rects = document.querySelectorAll("#map-svg rect");
 
-        const style = document.createElement("style");
-        style.textContent = `
-          @keyframes glimmer {
-            0% { opacity: 1; }
-            100% { opacity: 0.1; }
-          }
-        `;
-        document.head.appendChild(style);
-      }, 100);
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes glimmer {
+          0% { opacity: 1; }
+          100% { opacity: 0.1; }
+        }
+      `;
+      document.head.appendChild(style);
+
+      rects.forEach((rect) => {
+        const duration = Math.random() * 1.5 + 0.5;
+        const delay = Math.random() * 1;
+        rect.setAttribute(
+          "style",
+          `animation: glimmer ${duration}s ease-in-out ${delay}s infinite alternate;`,
+        );
+      });
 
       return () => clearTimeout(timer);
-    }
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, [svgContent]);
 
   if (!mounted) {

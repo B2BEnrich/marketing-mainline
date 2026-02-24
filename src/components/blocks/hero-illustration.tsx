@@ -221,18 +221,25 @@ export const HeroIllustration = ({ preset = "default" }: HeroIllustrationProps) 
   const activeSample = samples.find(s => s.id === activeTab) || samples[0];
   const [displayedCode, setDisplayedCode] = useState("");
 
-  // Typing effect
+  // Typing effect — skipped entirely for reduced-motion (Lighthouse, accessibility)
   useEffect(() => {
-    let index = 0;
     const targetCode = activeSample.code;
+
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (prefersReduced) {
+      setDisplayedCode(targetCode);
+      return;
+    }
+
+    let index = 0;
     setDisplayedCode("");
-    
-    // Reset immediately for smoother transition
-    setDisplayedCode(""); 
 
     const intervalId = setInterval(() => {
       setDisplayedCode(targetCode.slice(0, index));
-      index += 5; // Speed
+      index += 5;
       if (index > targetCode.length) {
         setDisplayedCode(targetCode);
         clearInterval(intervalId);
