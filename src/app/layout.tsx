@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import type { Metadata, Viewport } from "next";
 
 import { Footer } from "@/components/blocks/footer";
+import { FooterCta } from "@/components/blocks/footer-cta";
 import { Navbar } from "@/components/blocks/navbar";
 import { CriticalCSS } from "@/components/optimization/critical-css";
 import { DeferredScripts } from "@/components/scripts/deferred-scripts";
@@ -203,6 +204,7 @@ export default function RootLayout({
           <div className="bg-background">
             <div className="mx-2 md:mx-8 lg:mx-12 xl:mx-16">
               <div className="border-border/20 border-x">
+                <FooterCta />
                 <Footer />
               </div>
             </div>
