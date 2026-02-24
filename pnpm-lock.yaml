@@ -50,9 +50,6 @@ importers:
       '@react-three/fiber':
         specifier: ^9.5.0
         version: 9.5.0(@types/react@19.2.13)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(three@0.182.0)
-      '@styleglide/kit-view-provider':
-        specifier: ^0.0.8
-        version: 0.0.8(next-themes@0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
@@ -2271,13 +2268,6 @@ packages:
   '@stefanprobst/rehype-extract-toc@3.0.0':
     resolution: {integrity: sha512-ZnmL6g8DydunVa2/Vk54PTPC+Ib096Xwvd/mqhK/mqsTh6jaiLZFAvM3FUsOiio0oeVpUDb1jbBPePfA9m/NRg==}
     engines: {node: '>=18'}
-
-  '@styleglide/kit-view-provider@0.0.8':
-    resolution: {integrity: sha512-AVt+ZjYpeG/QQqISL/Bm9Eak2Yuees7aiuYiOAUWb5wGXD+3/co6zjoj2x1a9XWG5goe5DzZeTOHXq/UwGEXtA==}
-    peerDependencies:
-      next-themes: ^0.4.0
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
@@ -4901,12 +4891,6 @@ packages:
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
-
-  react-hotkeys-hook@5.2.3:
-    resolution: {integrity: sha512-Q27F8EuImYJOVSXAjSQrQPj9cx4GSNY+WdSdk5tSNN085H8/a00W6LZp0PrytEDwF6iT0pGTJeVEDKPRpEK2Bg==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
 
   react-icons@5.5.0:
     resolution: {integrity: sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==}
@@ -8453,13 +8437,6 @@ snapshots:
       hast-util-to-string: 3.0.1
       unist-util-visit: 5.1.0
 
-  '@styleglide/kit-view-provider@0.0.8(next-themes@0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
-    dependencies:
-      next-themes: 0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
-      react-hotkeys-hook: 5.2.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-
   '@swc/helpers@0.5.15':
     dependencies:
       tslib: 2.8.1
@@ -11571,11 +11548,6 @@ snapshots:
   react-hook-form@7.71.1(react@19.2.4):
     dependencies:
       react: 19.2.4
-
-  react-hotkeys-hook@5.2.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
-    dependencies:
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
 
   react-icons@5.5.0(react@19.2.4):
     dependencies:

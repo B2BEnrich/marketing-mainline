@@ -8,7 +8,6 @@ import { Navbar } from "@/components/blocks/navbar";
 import { CriticalCSS } from "@/components/optimization/critical-css";
 import { DeferredScripts } from "@/components/scripts/deferred-scripts";
 import { OrganizationSchema } from "@/components/seo/organization-schema";
-import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
 
@@ -187,11 +186,6 @@ export default function RootLayout({
         <OrganizationSchema />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <script
-          async
-          crossOrigin="anonymous"
-          src="https://tweakcn.com/live-preview.min.js"
-        />
       </head>
       <body className={`${dmSans.variable} ${inter.variable} antialiased`}>
         <ThemeProvider
@@ -200,7 +194,6 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <StyleGlideProvider />
           <Navbar />
           <div className="mx-2 md:mx-8 lg:mx-12 xl:mx-16">
             <div className="border-border border-x">
