@@ -1,4 +1,5 @@
 import React from "react";
+import { LazySection } from "@/components/optimization/lazy-section";
 
 import { type Metadata } from "next";
 
@@ -6,6 +7,14 @@ import { Background } from "@/components/background";
 import { FAQ } from "@/components/blocks/faq";
 import { FooterPricing } from "@/components/blocks/footer-pricing";
 import { HowCreditsWork } from "@/components/blocks/how-credits-work";
+
+import { CTASkeleton } from "@/components/blocks/footer-cta-skeleton";
+
+const FooterCta = React.lazy(() =>
+  import("@/components/blocks/footer-cta").then((m) => ({
+    default: m.FooterCta,
+  })),
+);
 
 export const metadata: Metadata = {
   title: "Pricing – B2BEnrich",
@@ -57,6 +66,11 @@ const Page = () => {
       <FooterPricing headerTag="h1" showBackground={true} />
       <HowCreditsWork />
       <FAQ categories={PRICING_FAQ_ITEMS} />
+      <LazySection fallback={<CTASkeleton />} rootMargin="400px 0px">
+        <React.Suspense fallback={<CTASkeleton />}>
+          <FooterCta />
+        </React.Suspense>
+      </LazySection>
     </>
   );
 };
