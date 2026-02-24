@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { companySearchFAQ } from "@/lib/faq-data";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
 const PeopleSearchFeatures = React.lazy(() =>
@@ -194,6 +195,18 @@ export default function CompanySearchPage() {
         description="B2B company database search API with 50M+ companies. Filter by industry, location, revenue, employee count, and technology stack."
         url="https://b2benrich.com/products/company-search"
         category="BusinessApplication"
+      />
+
+      <ContentSummary
+        title="Company Search API — B2B Company Database with 50M+ Companies"
+        description="B2BEnrich's B2B company database provides API access to 50M+ companies worldwide. Filter by industry, location, revenue, employee count, and technology stack to build targeted account lists. 5 credits per search."
+        keyPoints={[
+          "Industry and Vertical Search: Filter by industry classification, vertical, and sub-industry. Target SaaS, fintech, healthcare, manufacturing, retail, and more with detailed industry taxonomies.",
+          "Firmographic Filters: Search by company size, revenue range, employee count, growth stage, public/private status, and funding stage for precise account targeting.",
+          "Technology Stack Search: Discover companies using specific technologies across 15+ categories including CRM, marketing automation, analytics, and hosting.",
+          "Location-Based Search: Filter by headquarters country, state, city, and region to build location-specific account lists worldwide.",
+          "Credit-based pricing: 5 credits per search. No seat fees. Free tier available.",
+        ]}
       />
 
       <SolutionHero

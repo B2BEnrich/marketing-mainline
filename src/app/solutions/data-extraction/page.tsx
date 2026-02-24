@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { dataExtractionFAQ } from "@/lib/faq-data";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
 const EnrichmentData = React.lazy(() =>
@@ -243,6 +244,19 @@ export default function DataExtractionPage() {
         description="B2B data extraction API for developers. Extract professional profiles and company data from 500M+ contacts and 50M+ companies via REST API."
         url="https://b2benrich.com/solutions/data-extraction"
         category="BusinessApplication"
+      />
+
+      <ContentSummary
+        title="B2B Data Extraction API & Services — 500M+ Contacts, 50M+ Companies"
+        description="B2BEnrich provides B2B data extraction for developers and product builders. Extract professional profiles and company data from 500M+ contacts and 50M+ companies via a simple REST API. Real-time, always fresh."
+        keyPoints={[
+          "People Data Extraction: Extract full name, job title, company, email, phone, work history, education, and social profiles. Real-time access to 500M+ contacts. 1 credit per call.",
+          "Company Data Extraction: Extract industry, revenue, employee count, funding history, technology stack, and HQ location for 50M+ companies. 1 credit per call.",
+          "Real-Time Extraction: On-demand lookups and instant profile resolution in milliseconds. Perfect for product features requiring live B2B data.",
+          "Bulk Data Extraction: Upload CSVs or use batch endpoints to extract thousands of records at scale for high-volume workflows.",
+          "Search and Discovery: 30+ filters for building targeted datasets by job title, industry, technology, revenue, and location.",
+          "Credit-based pricing: 1 credit per extraction call. No seat fees. Free tier available.",
+        ]}
       />
 
       <SolutionHero

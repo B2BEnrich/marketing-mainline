@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { prospectorFAQ } from "@/lib/faq-data";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
 const ProspectorFeatures = React.lazy(() =>
@@ -197,6 +198,19 @@ export default function ProspectorPage() {
         description="Advanced B2B prospecting API with 30+ filters. Find verified contacts and companies by technology, revenue, industry, and location to build targeted lead lists."
         url="https://b2benrich.com/products/prospector"
         category="BusinessApplication"
+      />
+
+      <ContentSummary
+        title="B2B Prospector API — 30+ Filters to Build Precision Lead Lists from 550M+ Contacts"
+        description="B2BEnrich's prospector API is one of the leading B2B data providers. Build highly targeted lead lists with 30+ filters including job title, company size, industry, technology stack, revenue, location, and intent signals. 5 credits per search."
+        keyPoints={[
+          "Technology Stack Filters: Find prospects using specific CRM (Salesforce, HubSpot), marketing automation, analytics, hosting, and 15+ technology categories for technology-based prospecting.",
+          "Firmographic Filters: Target companies by revenue range, employee count, industry classification, growth stage, public/private status, and funding stage.",
+          "Job Title and Seniority Filters: Search for C-level executives, VPs, Directors, Managers, or individual contributors by job title, seniority, department, and role.",
+          "Intent Signals: Identify high-intent prospects via technology adoption signals, funding events, hiring patterns, and growth indicators.",
+          "Location Filters: Target prospects by country, state, city, and region for geographic precision.",
+          "Credit-based pricing: 5 credits per prospector search. No seat fees. Free tier available.",
+        ]}
       />
 
       <SolutionHero

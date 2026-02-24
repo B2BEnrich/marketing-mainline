@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { validationFAQ } from "@/lib/faq-data";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
 const ValidationFeatures = React.lazy(() =>
@@ -196,6 +197,19 @@ export default function ValidationPage() {
         description="Real-time email verification API with SMTP checks, deliverability scoring, disposable address detection, and phone validation. 1 credit per check."
         url="https://b2benrich.com/products/validation"
         category="BusinessApplication"
+      />
+
+      <ContentSummary
+        title="Email Verification & Validation API — SMTP Checks, Disposable Detection & Phone Validation"
+        description="B2BEnrich provides real-time email verification with SMTP-level checks. Verifies deliverability, detects disposable addresses, validates MX records, checks breach history, and scores email quality. Also includes email finder and phone validation. 1 credit per check."
+        keyPoints={[
+          "Real-Time Email Validation API: Comprehensive SMTP verification — checks mailbox existence, validates MX records, detects catch-all domains, and provides instant deliverability scoring. 1 credit per verification.",
+          "Disposable and Temporary Email Detection: Identifies disposable email addresses, temporary mailboxes, role-based emails, spam traps, free email providers, and risky domains.",
+          "Email Finder API: Look up business email addresses by name and company domain, then validate deliverability instantly. 1 credit per lookup.",
+          "Phone Validation API: Check number format, verify carrier information, detect line type (mobile/landline), and validate country codes. 1 credit per validation.",
+          "Breach History Checks: Cross-references emails against known data breaches to flag compromised addresses before adding to your database.",
+          "Credit-based pricing: 1 credit per verification or validation. No seat fees. Free tier available.",
+        ]}
       />
 
       <SolutionHero

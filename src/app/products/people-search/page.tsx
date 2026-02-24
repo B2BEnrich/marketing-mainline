@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { peopleSearchFAQ } from "@/lib/faq-data";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
 const PeopleSearchFeatures = React.lazy(() =>
@@ -186,6 +187,18 @@ export default function PeopleSearchPage() {
         description="B2B contact database search API with 550M+ professionals. Filter by job title, company, seniority, and location to build targeted lead lists."
         url="https://b2benrich.com/products/people-search"
         category="BusinessApplication"
+      />
+
+      <ContentSummary
+        title="B2B Contact Database — Search 550M+ Professionals via API"
+        description="B2BEnrich's B2B contact database provides API access to 550M+ professional profiles. Search for decision-makers by job title, company, seniority, department, and location. Build targeted lead lists with verified emails and phone numbers. 5 credits per search."
+        keyPoints={[
+          "Search by Job Title and Role: Find CEOs, VPs, Directors, Managers, and individual contributors across any industry with verified emails and phone numbers.",
+          "Company-Based Search: Discover all employees at target companies by domain or name. Build buying group lists and map organizational structures.",
+          "Location and Industry Filters: Filter by geographic location, country, state, city, and industry classification across all major industries and geographies worldwide.",
+          "Verified Contact Data: All contacts include verified business emails and phone numbers for high-deliverability outreach.",
+          "Credit-based pricing: 5 credits per search. No seat fees. Free tier available.",
+        ]}
       />
 
       <SolutionHero

@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { b2bDatabaseFAQ } from "@/lib/faq-data";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
 const B2BDatabaseFeatures = React.lazy(() =>
@@ -195,6 +196,18 @@ export default function B2BDatabasePage() {
         description="B2B database with 550M+ contacts and 50M+ companies. Access verified emails, firmographic data, and company intelligence via real-time REST API."
         url="https://b2benrich.com/solutions/b2b-database"
         category="BusinessApplication"
+      />
+
+      <ContentSummary
+        title="B2B Database — 550M+ Contacts & 50M+ Companies via API"
+        description="B2BEnrich provides API access to the most comprehensive B2B database with 550M+ professional contacts and 50M+ companies. Verified emails, phone numbers, firmographic data, and business intelligence. GDPR-compliant, real-time, always fresh."
+        keyPoints={[
+          "B2B Contact Database — 550M+ Professionals: Complete contact information including business emails, phone numbers, job titles, seniority levels, and company affiliations. Continuously updated and GDPR-compliant.",
+          "Company Database — 50M+ Companies: Full firmographic data including industry, revenue range, employee count, funding history, technology stack, and headquarters location.",
+          "Real-Time API Access: REST API with real-time data. No stale records. Always-fresh information from one of the leading B2B data providers.",
+          "GDPR & CCPA Compliant: Ethically sourced public professional data. Supports data subject access requests and all major privacy regulations.",
+          "Credit-based pricing: 1 credit per enrichment, 5 credits per search. No seat fees. Free tier available.",
+        ]}
       />
 
       <SolutionHero

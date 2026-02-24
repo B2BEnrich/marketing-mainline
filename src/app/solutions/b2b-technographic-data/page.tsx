@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { technographicDataFAQ } from "@/lib/faq-data";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
 const TechnographicDataFeatures = React.lazy(() =>
@@ -200,6 +201,18 @@ export default function B2BTechnographicDataPage() {
         description="B2B technographic data API providing technology stack intelligence for 50M+ companies. Discover software usage, tech adoption signals, and technographic segmentation."
         url="https://b2benrich.com/solutions/b2b-technographic-data"
         category="BusinessApplication"
+      />
+
+      <ContentSummary
+        title="B2B Technographic Data — Technology Stack Intelligence for 50M+ Companies"
+        description="B2BEnrich provides comprehensive B2B technographic data for 50M+ companies worldwide. Reveals complete technology stacks, software usage patterns, and tech adoption signals across 15+ categories. Essential for technographic segmentation and competitive intelligence."
+        keyPoints={[
+          "Technology Stack Detection: Detect CRM systems (Salesforce, HubSpot), marketing automation, analytics tools, hosting providers, payment processors, and 15+ technology categories for any company.",
+          "Technographic Segmentation: Build targeted account lists by filtering companies on the technologies they use. Identify prospects on competitor products or find accounts ready for migration.",
+          "Tech Adoption Signals: Track technology changes, detect recent implementations, and discover early adopters. Includes adoption timing and technology stack evolution data.",
+          "Competitive Intelligence: Analyze competitor customer bases, identify dissatisfied customers, and find replacement opportunities using full technology stack data.",
+          "Credit-based pricing: 1 credit per company enrichment with full technology stack. No seat fees. Free tier available.",
+        ]}
       />
 
       <SolutionHero

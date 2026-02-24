@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { dataEnrichmentFAQ } from "@/lib/faq-data";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
 const EnrichmentData = React.lazy(() =>
@@ -240,6 +241,19 @@ export default function DataEnrichmentPage() {
         description="B2B data enrichment API for product builders. Enrich contacts, companies, and CRM records with verified data — 250+ data points, 1 credit per call."
         url="https://b2benrich.com/solutions/data-enrichment"
         category="BusinessApplication"
+      />
+
+      <ContentSummary
+        title="B2B Data Enrichment API & Services — People, Company & CRM Enrichment"
+        description="B2BEnrich provides comprehensive data enrichment through a developer-first REST API. Covers people enrichment, company enrichment, and CRM data enrichment with 250+ data points per record. 1 credit per call. GDPR-compliant."
+        keyPoints={[
+          "People Enrichment API: Turn emails, phones, and profile URLs into complete professional profiles with verified job titles, company information, work history, and social profiles. 1 credit per call.",
+          "Company Enrichment API: Resolve domains into rich firmographic profiles with industry, revenue range, employee count, funding history, HQ location, and technology stack. 1 credit per call.",
+          "CRM Data Enrichment: Native integrations for HubSpot, Salesforce, and Pipedrive to keep CRM records fresh automatically with verified contact and company data.",
+          "Bulk Data Enrichment: Process large datasets via batch endpoints or CSV uploads for high-volume B2B data enrichment workflows at scale.",
+          "Real-Time Enrichment: Returns 250+ data points in milliseconds for form fills, lead capture, and instant data quality workflows.",
+          "Credit-based pricing: 1 credit per enrichment call. No seat fees, no minimums. Free tier available.",
+        ]}
       />
 
       <SolutionHero

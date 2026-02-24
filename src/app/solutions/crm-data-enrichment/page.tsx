@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { crmEnrichmentFAQ } from "@/lib/faq-data";
+import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
 const CRMEnrichmentFeatures = React.lazy(() =>
@@ -193,6 +194,18 @@ export default function CrmDataEnrichmentPage() {
         description="Automate CRM data enrichment for HubSpot, Salesforce, and Pipedrive. Keep CRM records fresh with verified contact data and company insights."
         url="https://b2benrich.com/solutions/crm-data-enrichment"
         category="BusinessApplication"
+      />
+
+      <ContentSummary
+        title="CRM Data Enrichment — Automate HubSpot, Salesforce & Pipedrive Enrichment"
+        description="B2BEnrich automates CRM data enrichment for HubSpot, Salesforce, and Pipedrive. Keep CRM records fresh with verified contact data, job titles, company insights, and firmographic information through native integrations. 1 credit per enrichment call."
+        keyPoints={[
+          "HubSpot Enrichment: Native integration enriches contacts and companies in real-time with verified emails, job titles, phone numbers, and firmographic data. Automatically updates records on new contact creation.",
+          "Salesforce Enrichment: Native integration enriches leads, contacts, and accounts with complete professional and company data. Keeps Salesforce records up-to-date automatically.",
+          "Pipedrive and Other CRM Enrichment: Connect any CRM via Zapier, Make, or direct API integration. Supports webhooks and HTTP-based enrichment for any platform.",
+          "Automated Data Quality: Monitors for stale records, missing fields, and outdated information. Automatically enriches CRM data as new contacts are added.",
+          "Credit-based pricing: 1 credit per enrichment call. No seat fees, no minimums. Free tier available.",
+        ]}
       />
 
       <SolutionHero
