@@ -19,11 +19,11 @@ export const Hero = () => {
             <span className="text-foreground text-sm font-semibold md:text-sm">Complete Contact & Account Data API</span>
           </div>
           
-          <h1 className="text-foreground text-5xl tracking-tight md:text-6xl lg:text-7xl">
+          <h1 className="text-foreground">
             B2B Data Enrichment API
           </h1>
 
-          <p className="text-muted-foreground text-md mt-5 md:text-lg lg:text-xl text-balance">
+          <p className="text-muted-foreground mt-5 text-balance">
             Access 550M+ business contacts with real-time intent data. Power your AI Agents and apps with 250+ data points per prospect.
           </p>
 

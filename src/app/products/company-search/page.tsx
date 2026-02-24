@@ -200,6 +200,7 @@ export default function CompanySearchPage() {
         badge="COMPANY SEARCH API"
         title="Company Search API — B2B Company Database"
         description="Search our B2B company database of 50M+ companies. Filter by industry, location, size, revenue, and technology stack to build targeted account lists for your sales and marketing teams."
+        primaryCtaLink="https://docs.b2benrich.com/api/search#search-companies"
         showIllustration={true}
         illustrationPreset="company-search"
       />

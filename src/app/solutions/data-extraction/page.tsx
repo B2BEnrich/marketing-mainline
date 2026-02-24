@@ -249,6 +249,7 @@ export default function DataExtractionPage() {
         badge="B2B DATA EXTRACTION API"
         title="B2B Data Extraction API & Services"
         description="Build your product features with reliable B2B data extraction. Query 500M+ professional profiles and 50M+ companies through our simple RESTful API. Real-time data, always fresh."
+        primaryCtaLink="https://docs.b2benrich.com/api/search#prospector-search"
         showIllustration={true}
         illustrationPreset="data-extraction"
       />

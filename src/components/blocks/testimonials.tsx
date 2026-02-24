@@ -86,10 +86,10 @@ export const Testimonials = ({
       <section className={cn("overflow-hidden py-28 lg:py-32", className)}>
         <div className="container">
           <div className="space-y-4">
-            <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+            <h2>
               Trusted by product builders
             </h2>
-            <p className="text-muted-foreground max-w-md leading-snug">
+            <p className="text-muted-foreground max-w-md">
               Mainline is built on the habits that make the best product teams
               successful: staying focused, moving quickly, and always aiming for
               high-quality work.

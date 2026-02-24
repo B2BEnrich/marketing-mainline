@@ -128,10 +128,10 @@ export function ApiSection() {
       <div className="container">
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="text-start max-w-2xl">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
+            <h2 className="text-foreground">
               Developer-First API
             </h2>
-            <p className="text-muted-foreground mt-4 text-lg text-balance">
+            <p className="text-muted-foreground mt-4 text-balance">
               Integrate enterprise-grade B2B enrichment into your stack with a few lines of code.
             </p>
           </div>

@@ -24,15 +24,15 @@ export function AboutHero() {
     <section className="">
       <div className="container flex max-w-5xl flex-col justify-between gap-8 md:gap-20 lg:flex-row lg:items-center lg:gap-24 xl:gap-24">
         <div className="flex-[1.5]">
-          <h1 className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1>
             Democratising quality software
           </h1>
 
-          <p className="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
+          <h2 className="text-muted-foreground mt-5">
             Mainline is bringing modern software to life with AI magic.
-          </p>
+          </h2>
 
-          <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
+          <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-balance md:block lg:mt-12">
             At Mainline, we are dedicated to transforming the way teams plan,
             execute, and deliver projects. Our mission is to provide our
             customers with an unbeatable edge over delays, inefficiencies, and

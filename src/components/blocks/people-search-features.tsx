@@ -87,8 +87,8 @@ const FeatureSection = ({
           </div>
           
           <div className="space-y-4">
-            <h3 className="text-3xl font-semibold tracking-tight text-foreground">{title}</h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <h3 className="text-foreground">{title}</h3>
+            <p className="text-muted-foreground">
               {description}
             </p>
           </div>
@@ -167,7 +167,7 @@ export const PeopleSearchFeatures = () => {
         icon={Users}
         code={COMPANY_EMPLOYEES_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/search#list-employees-at-a-company-by-domain-5-credits"
+        link="https://docs.b2benrich.com/api/search#search-employees-at-a-company"
         linkText="View Documentation"
       />
 
@@ -184,7 +184,7 @@ export const PeopleSearchFeatures = () => {
         icon={Search}
         code={COMPANY_TITLE_SEARCH_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/search#search-by-company-name-and-job-title-5-credits"
+        link="https://docs.b2benrich.com/api/search#search-by-job-title-and-company-name"
         linkText="View Documentation"
         align="right"
       />
@@ -202,7 +202,7 @@ export const PeopleSearchFeatures = () => {
         icon={UserSearch}
         code={NAME_TITLE_SEARCH_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/search#search-by-person-name-and-job-title-5-credits"
+        link="https://docs.b2benrich.com/api/search#find-a-contact-by-name-and-company-domain"
         linkText="View Documentation"
       />
     </section>

@@ -202,6 +202,7 @@ export default function ValidationPage() {
         badge="EMAIL VALIDATION API"
         title="Email Verification & Validation API"
         description="Real-time email verification and phone validation API. Check email deliverability with SMTP verification, detect disposable addresses, and validate phone numbers to reduce bounce rates."
+        primaryCtaLink="https://docs.b2benrich.com/api/validation#validate-an-email-address-1-credit"
         showIllustration={true}
         illustrationPreset="validation"
       />

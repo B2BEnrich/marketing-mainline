@@ -93,8 +93,8 @@ export function TextSection({
   ctaButton,
 }: TextSectionProps) {
   return (
-    <section className="flex-1 space-y-4 text-lg md:space-y-6">
-      {title && <h2 className="text-foreground text-4xl">{title}</h2>}
+    <section className="flex-1 space-y-4 md:space-y-6">
+      {title && <h2 className="text-foreground">{title}</h2>}
       <div className="text-muted-foreground max-w-xl space-y-6">
         {paragraphs.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>

@@ -89,8 +89,8 @@ const FeatureSection = ({
           </div>
           
           <div className="space-y-4">
-            <h3 className="text-3xl font-semibold tracking-tight text-foreground">{title}</h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <h3 className="text-foreground">{title}</h3>
+            <p className="text-muted-foreground">
               {description}
             </p>
           </div>
@@ -204,7 +204,7 @@ export const DataExtractionFeatures = () => {
         icon={Users}
         code={EMPLOYEE_LIST_CODE}
         language="bash"
-        link="/products/employee-list"
+        link="/products/people-search"
         linkText="View Employee List API"
       />
     </section>

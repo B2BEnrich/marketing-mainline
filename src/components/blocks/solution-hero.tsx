@@ -46,11 +46,11 @@ export const SolutionHero = ({
             <span className="text-foreground text-sm font-semibold md:text-sm">{badge}</span>
           </div>
           
-          <h1 className="text-foreground text-5xl tracking-tight md:text-6xl lg:text-7xl">
+          <h1 className="text-foreground">
             {title}
           </h1>
 
-          <p className="text-muted-foreground text-md mt-5 md:text-lg lg:text-xl text-balance">
+          <p className="text-muted-foreground mt-5 text-balance">
             {description}
           </p>
 

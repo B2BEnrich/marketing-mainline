@@ -35,7 +35,7 @@ export default function WhatIsDataEnrichmentPage() {
         <h1 className="text-foreground mb-6">
           What Is Data Enrichment? A Complete Guide
         </h1>
-        <p className="text-muted-foreground text-lg lg:text-xl text-balance max-w-3xl mx-auto">
+        <p className="text-muted-foreground text-balance max-w-3xl mx-auto">
           Data enrichment is the process of enhancing existing records with additional information from external sources. In B2B, this means turning sparse contact and company records into rich, actionable profiles.
         </p>
       </div>
@@ -44,7 +44,7 @@ export default function WhatIsDataEnrichmentPage() {
       <div className="bg-card border border-border rounded-xl p-6 mb-12">
         <div className="flex items-center gap-3 mb-4">
           <BookOpen className="size-5 text-primary" />
-          <h2 className="text-lg font-semibold text-foreground">In This Guide</h2>
+          <h6 className="text-foreground">In This Guide</h6>
         </div>
         <ol className="space-y-2 text-sm">
           {[
@@ -72,10 +72,10 @@ export default function WhatIsDataEnrichmentPage() {
           </div>
           <h2>What is data enrichment?</h2>
         </div>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        <p className="text-muted-foreground mb-4">
           <strong className="text-foreground">Data enrichment</strong> is the process of supplementing your existing data records with additional, verified information sourced externally. When applied to B2B data, enrichment takes incomplete contact or company records — a name and email, a company domain, a job title — and fills them out with a full picture.
         </p>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        <p className="text-muted-foreground mb-4">
           A <strong className="text-foreground">contact enrichment</strong> call might take an email address and return the person&apos;s full name, current job title, company, location, and phone number. A <strong className="text-foreground">company enrichment</strong> call might take a domain and return the company&apos;s industry, employee count, revenue range, technology stack, and funding history.
         </p>
         <div className="bg-muted/40 border border-border rounded-lg p-5 my-6">
@@ -112,13 +112,13 @@ export default function WhatIsDataEnrichmentPage() {
           </div>
           <h2>How does data enrichment work?</h2>
         </div>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        <p className="text-muted-foreground mb-4">
           Modern data enrichment works through an API. You send a known identifier — an email address, a company domain, or a professional profile URL — and the enrichment API returns all associated data it has on file.
         </p>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        <p className="text-muted-foreground mb-4">
           The data enrichment platform maintains a large, continuously updated database of B2B contacts and companies. When you call the API, it looks up the identifier in that database and returns enriched data in real time.
         </p>
-        <p className="text-muted-foreground text-lg leading-relaxed">
+        <p className="text-muted-foreground">
           The best data enrichment services do this at scale — supporting bulk enrichment for thousands of records — and keep their database fresh through ongoing data collection and verification. The result is <strong className="text-foreground">enriched data</strong> that your sales, marketing, and product teams can act on immediately.
         </p>
       </section>
@@ -131,7 +131,7 @@ export default function WhatIsDataEnrichmentPage() {
           </div>
           <h2>B2B use cases and data enrichment examples</h2>
         </div>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+        <p className="text-muted-foreground mb-6">
           Data enrichment is used throughout the B2B revenue stack. Here are the most common use cases, with concrete data enrichment examples:
         </p>
         <div className="space-y-4">
@@ -161,7 +161,7 @@ export default function WhatIsDataEnrichmentPage() {
               <CheckCircle className="size-5 text-primary shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-foreground mb-1">{item.title}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-muted-foreground text-sm">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -176,7 +176,7 @@ export default function WhatIsDataEnrichmentPage() {
           </div>
           <h2>Data enrichment techniques</h2>
         </div>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+        <p className="text-muted-foreground mb-6">
           There are several established <strong className="text-foreground">contact data enrichment techniques</strong>, each suited to different workflows:
         </p>
         <div className="space-y-6">
@@ -199,8 +199,8 @@ export default function WhatIsDataEnrichmentPage() {
             },
           ].map((item, i) => (
             <div key={i} className="border-l-2 border-primary/30 pl-5">
-              <h3 className="text-base font-semibold text-foreground mb-1">{item.technique}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+              <h6 className="text-foreground mb-1">{item.technique}</h6>
+              <p className="text-muted-foreground text-sm">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -214,7 +214,7 @@ export default function WhatIsDataEnrichmentPage() {
           </div>
           <h2>Data enrichment best practices</h2>
         </div>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+        <p className="text-muted-foreground mb-6">
           To get the most out of your data enrichment program, follow these <strong className="text-foreground">data enrichment best practices</strong>:
         </p>
         <ul className="space-y-4">
@@ -228,7 +228,7 @@ export default function WhatIsDataEnrichmentPage() {
           ].map((practice, i) => (
             <li key={i} className="flex items-start gap-3">
               <CheckCircle className="size-5 text-primary shrink-0 mt-0.5" />
-              <span className="text-muted-foreground leading-relaxed">{practice}</span>
+              <span className="text-muted-foreground">{practice}</span>
             </li>
           ))}
         </ul>
@@ -242,13 +242,13 @@ export default function WhatIsDataEnrichmentPage() {
           </div>
           <h2>CRM data enrichment</h2>
         </div>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        <p className="text-muted-foreground mb-4">
           <strong className="text-foreground">CRM data enrichment</strong> is the practice of automatically appending fresh, verified data to contact and account records inside your CRM — whether that&apos;s HubSpot, Salesforce, or a custom system.
         </p>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        <p className="text-muted-foreground mb-4">
           Without enrichment, CRM data decays. People change jobs, companies change sizes, and email addresses go cold. Studies suggest B2B data decays at 30% per year. CRM enrichment combats this by continuously refreshing key fields.
         </p>
-        <p className="text-muted-foreground text-lg leading-relaxed">
+        <p className="text-muted-foreground">
           The most effective approach is to integrate a <strong className="text-foreground">CRM enrichment API</strong> directly into your CRM workflow — triggered on new contact creation and on a scheduled cadence for existing records. This keeps your pipeline data complete and your sales team working with accurate information.
         </p>
       </section>
@@ -261,10 +261,10 @@ export default function WhatIsDataEnrichmentPage() {
           </div>
           <h2>How to enrich B2B account data for ICP definition</h2>
         </div>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        <p className="text-muted-foreground mb-4">
           Enriching your customer accounts with firmographic and technographic data is the foundation of a rigorous Ideal Customer Profile (ICP). Without enriched data, ICP definitions are based on intuition. With enriched data, they are based on patterns in your actual best customers.
         </p>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        <p className="text-muted-foreground mb-4">
           To <strong className="text-foreground">enrich B2B account data for ICP definition</strong>:
         </p>
         <ol className="space-y-4 list-none">
@@ -279,7 +279,7 @@ export default function WhatIsDataEnrichmentPage() {
               <span className="size-7 rounded-full bg-primary/10 text-primary text-sm font-semibold flex items-center justify-center shrink-0 mt-0.5">
                 {i + 1}
               </span>
-              <span className="text-muted-foreground leading-relaxed">{step}</span>
+              <span className="text-muted-foreground">{step}</span>
             </li>
           ))}
         </ol>
@@ -293,13 +293,13 @@ export default function WhatIsDataEnrichmentPage() {
           </div>
           <h2>Data enrichment tools and services</h2>
         </div>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        <p className="text-muted-foreground mb-4">
           <strong className="text-foreground">Data enrichment tools</strong> fall into two broad categories: API-first platforms for developers and product teams, and no-code enrichment services for sales and marketing teams.
         </p>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        <p className="text-muted-foreground mb-4">
           API-first <strong className="text-foreground">data enrichment services</strong> like B2BEnrich give you direct REST API access to enrichment, search, and validation endpoints. You control when and how enrichment happens, integrate it into your own product, and pay only for what you use on a per-call credit model.
         </p>
-        <p className="text-muted-foreground text-lg leading-relaxed">
+        <p className="text-muted-foreground">
           When evaluating <strong className="text-foreground">data enrichment providers</strong>, consider data coverage (contact count and company count), freshness (how often the database is updated), compliance (GDPR and CCPA), and API reliability (uptime SLAs and latency).
         </p>
       </section>
@@ -307,7 +307,7 @@ export default function WhatIsDataEnrichmentPage() {
       {/* CTA */}
       <div className="bg-card border border-border rounded-2xl p-8 text-center">
         <h2 className="mb-4">Start enriching your B2B data today</h2>
-        <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
+        <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
           B2BEnrich provides a complete data enrichment API — people enrichment, company enrichment, email validation, and B2B search — all in one platform.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

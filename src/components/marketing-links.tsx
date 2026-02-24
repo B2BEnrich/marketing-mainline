@@ -1,3 +1,5 @@
+import React from "react";
+
 import { 
   Users, 
   Building2, 
@@ -8,6 +10,7 @@ import {
   Download,
   RefreshCw,
   Cpu,
+  Twitter,
 } from "lucide-react";
 
 export const PRODUCT_LINKS = [
@@ -79,5 +82,60 @@ export const SOLUTION_LINKS = [
     href: "/solutions/b2b-technographic-data",
     description: "Discover what technology every company uses",
     icon: <Cpu className="size-5" />,
+  },
+];
+
+export const FOOTER_LINKS: {
+  title: string;
+  links: { name: string; href: string; external?: boolean }[];
+}[] = [
+  {
+    title: "Products",
+    links: [
+      { name: "People Enrichment", href: "/products/people-enrichment" },
+      { name: "Company Enrichment", href: "/products/company-enrichment" },
+      { name: "Validation", href: "/products/validation" },
+      { name: "People Search", href: "/products/people-search" },
+      { name: "Company Search", href: "/products/company-search" },
+      { name: "Prospector", href: "/products/prospector" },
+    ],
+  },
+  {
+    title: "Solutions",
+    links: [
+      { name: "Data Enrichment", href: "/solutions/data-enrichment" },
+      { name: "Data Extraction", href: "/solutions/data-extraction" },
+      { name: "B2B Database", href: "/solutions/b2b-database" },
+      { name: "CRM Enrichment", href: "/solutions/crm-data-enrichment" },
+      { name: "Technographic Data", href: "/solutions/b2b-technographic-data" },
+    ],
+  },
+  {
+    title: "Developers",
+    links: [
+      { name: "API Docs", href: "https://docs.b2benrich.com", external: true },
+      { name: "API Reference", href: "https://docs.b2benrich.com/api/person", external: true },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { name: "Pricing", href: "/pricing" },
+      { name: "FAQ", href: "/faq" },
+      { name: "Contact", href: "/contact" },
+      { name: "Privacy Policy", href: "/privacy" },
+    ],
+  },
+];
+
+export const SOCIAL_LINKS: {
+  name: string;
+  href: string;
+  icon: React.ReactNode;
+}[] = [
+  {
+    name: "X (Twitter)",
+    href: "https://x.com/b2benrich",
+    icon: <Twitter className="size-4" />,
   },
 ];

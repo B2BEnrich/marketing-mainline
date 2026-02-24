@@ -37,7 +37,7 @@ export function FooterPricing({
       )}
       <div className="container relative z-10">
         <div className="mb-12 text-center">
-          <HeaderTag className="mb-4 text-4xl md:text-5xl font-semibold tracking-tight text-foreground">B2Benrich Pricing</HeaderTag>
+          <HeaderTag className="mb-4 text-foreground">B2Benrich Pricing</HeaderTag>
           <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card px-4 py-2">
             <span className={`text-sm font-medium transition-colors ${!isAnnual ? 'text-foreground' : 'text-muted-foreground'}`}>Monthly</span>
             <button
@@ -60,7 +60,7 @@ export function FooterPricing({
           {/* Free Plan */}
           <div className="flex flex-col rounded-2xl border border-border bg-card p-6">
             <div className="mb-4">
-              <h3 className="mb-2 text-lg font-semibold">Free</h3>
+              <h3 className="mb-2">Free</h3>
             </div>
 
             <div className="mb-6">
@@ -97,7 +97,7 @@ export function FooterPricing({
           {/* Starter Plan */}
           <div className="flex flex-col rounded-2xl border-2 border-foreground bg-card p-6">
             <div className="mb-4">
-              <h3 className="mb-2 text-lg font-semibold">Starter</h3>
+              <h3 className="mb-2">Starter</h3>
             </div>
 
             <div className="mb-6">
@@ -135,7 +135,7 @@ export function FooterPricing({
           {/* Grow Plan */}
           <div className="flex flex-col rounded-2xl border border-border bg-card p-6">
             <div className="mb-4">
-              <h3 className="mb-2 text-lg font-semibold">Grow</h3>
+              <h3 className="mb-2">Grow</h3>
             </div>
 
             <div className="mb-6">
@@ -175,7 +175,7 @@ export function FooterPricing({
           {/* Enterprise Plan */}
           <div className="flex flex-col rounded-2xl border border-border bg-card p-6">
             <div className="mb-4">
-              <h3 className="mb-2 text-lg font-semibold">Enterprise</h3>
+              <h3 className="mb-2">Enterprise</h3>
             </div>
 
             <div className="mb-6">

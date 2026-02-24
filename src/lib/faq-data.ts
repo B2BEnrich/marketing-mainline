@@ -1,6 +1,47 @@
 import type { Category } from "@/components/blocks/faq";
 
 // ─────────────────────────────────────────────
+// /pricing
+// ─────────────────────────────────────────────
+export const pricingFAQ: Category[] = [
+  {
+    title: "Credits & Usage",
+    questions: [
+      {
+        question: "How do credits work?",
+        answer:
+          "Credits are the currency of the B2BEnrich API. Each API call consumes credits from your account balance. Most enrichment and validation endpoints cost 1 credit per request. Prospector search costs 5 credits. You can check your remaining balance at any time via the API. Credits never expire, and you can purchase more at any time without upgrading to a higher tier.",
+      },
+      {
+        question: "Do credits roll over?",
+        answer:
+          "Unused credits do not roll over to the next month on monthly plans. We recommend choosing a plan that matches your monthly usage needs. Annual plans provide all credits upfront so you can use them at your own pace throughout the year.",
+      },
+      {
+        question: "What happens if I run out of credits?",
+        answer:
+          "If you exceed your monthly credit allocation, you can either upgrade to a higher tier plan immediately to get more credits, or wait for your monthly renewal. We'll notify you when you're approaching your limit so you can plan accordingly.",
+      },
+    ],
+  },
+  {
+    title: "Billing & Plans",
+    questions: [
+      {
+        question: "Can I cancel my subscription?",
+        answer:
+          "Yes, you can cancel at any time. Your access will remain active until the end of your current billing period. There are no cancellation fees.",
+      },
+      {
+        question: "Do you offer a free trial?",
+        answer:
+          "Yes, we offer a 7-day free trial on our Starter and Grow plans so you can experience the full power of the platform risk-free. No credit card required to start.",
+      },
+    ],
+  },
+];
+
+// ─────────────────────────────────────────────
 // Home Page  /
 // ─────────────────────────────────────────────
 export const homeFAQ: Category[] = [
@@ -581,4 +622,198 @@ export const resourcesDataEnrichmentFAQ: Category[] = [
       },
     ],
   },
+];
+
+// ─────────────────────────────────────────────
+// Security & Compliance (shared)
+// ─────────────────────────────────────────────
+export const securityComplianceFAQ: Category[] = [
+  {
+    title: "Security & Compliance",
+    questions: [
+      {
+        question: "How is my data protected?",
+        answer:
+          "B2BEnrich uses HTTPS/TLS encryption for all API requests, ensuring your data is secure in transit. We implement API key authentication for secure access and maintain strict data privacy controls. Our infrastructure is designed with security and compliance as top priorities.",
+      },
+      {
+        question: "Is B2BEnrich GDPR and CCPA compliant?",
+        answer:
+          "Yes. B2BEnrich only indexes publicly available professional data and operates in compliance with GDPR, CCPA, and other applicable data privacy regulations. We provide mechanisms for data subject access requests and comply with all data protection standards. All API traffic is encrypted via HTTPS.",
+      },
+      {
+        question: "What support channels are available?",
+        answer:
+          "All users have access to our comprehensive documentation and email support at support@b2benrich.com. For sales inquiries, contact sales@b2benrich.com. We also maintain a status page for real-time system health updates.",
+      },
+    ],
+  },
+];
+
+// ─────────────────────────────────────────────
+// API & Integration (shared)
+// ─────────────────────────────────────────────
+export const apiIntegrationFAQ: Category[] = [
+  {
+    title: "API & Integration",
+    questions: [
+      {
+        question: "How do I integrate B2BEnrich into my applications?",
+        answer:
+          "B2BEnrich provides a RESTful API that you can integrate into any application or workflow. Simply call our enrichment endpoints with your API key in the `X-Api-Key` header to enrich leads programmatically. Our comprehensive documentation at docs.b2benrich.com includes code examples in curl, JavaScript, Python, and more.",
+      },
+      {
+        question: "What endpoints are available?",
+        answer:
+          "B2BEnrich offers multiple endpoints: People Enrichment (profile URL, email, or phone to full contact record), Company Enrichment (domain to firmographics), Email Verification, Phone Validation, Name+Domain to Email, People Search, Company Search, and Prospector Search with 30+ filters. Each endpoint is optimized for specific use cases and returns structured JSON.",
+      },
+      {
+        question: "Does B2BEnrich work with tools like Zapier, Clay, or Make?",
+        answer:
+          "Yes. B2BEnrich's REST API works with any automation tool that supports HTTP requests, including Zapier, Make (formerly Integromat), n8n, Clay, Retool, and custom-built pipelines. Set up automated enrichment flows that trigger on new leads, scheduled re-enrichment jobs, or event-driven data appending workflows.",
+      },
+      {
+        question: "What rate limits apply to the API?",
+        answer:
+          "Rate limits depend on your plan tier. All plans support concurrent requests so you can process large lists in parallel. For high-volume use cases or custom rate limit requirements, contact our sales team about enterprise plans. You can check your current usage and remaining credits at any time via the API.",
+      },
+    ],
+  },
+];
+
+// ─────────────────────────────────────────────
+// Comprehensive FAQ (all pages consolidated)
+// ─────────────────────────────────────────────
+export const comprehensiveFAQ: Category[] = [
+  // Platform Overview
+  {
+    title: "B2BEnrich Platform",
+    questions: [
+      ...homeFAQ[0].questions,
+      ...homeFAQ[1].questions,
+    ],
+  },
+
+  // Data Enrichment
+  {
+    title: "Data Enrichment",
+    questions: [
+      ...dataEnrichmentFAQ[0].questions,
+      ...dataEnrichmentFAQ[1].questions,
+    ],
+  },
+
+  // People & Lead Enrichment
+  {
+    title: "People & Lead Enrichment",
+    questions: [
+      ...peopleEnrichmentFAQ[0].questions,
+      ...peopleEnrichmentFAQ[1].questions,
+    ],
+  },
+
+  // Company Enrichment
+  {
+    title: "Company Enrichment",
+    questions: [
+      ...companyEnrichmentFAQ[0].questions,
+      ...companyEnrichmentFAQ[1].questions,
+    ],
+  },
+
+  // Email & Phone Validation
+  {
+    title: "Email & Phone Validation",
+    questions: [
+      ...validationFAQ[0].questions,
+      ...validationFAQ[1].questions,
+    ],
+  },
+
+  // People Search & Contact Database
+  {
+    title: "People Search & Contact Database",
+    questions: [
+      ...peopleSearchFAQ[0].questions,
+      ...peopleSearchFAQ[1].questions,
+    ],
+  },
+
+  // Company Search & Database
+  {
+    title: "Company Search & Database",
+    questions: [
+      ...companySearchFAQ[0].questions,
+      ...companySearchFAQ[1].questions,
+    ],
+  },
+
+  // B2B Prospector
+  {
+    title: "B2B Prospector",
+    questions: [
+      ...prospectorFAQ[0].questions,
+      ...prospectorFAQ[1].questions,
+    ],
+  },
+
+  // B2B Database
+  {
+    title: "B2B Database",
+    questions: [
+      ...b2bDatabaseFAQ[0].questions,
+      ...b2bDatabaseFAQ[1].questions,
+    ],
+  },
+
+  // CRM Data Enrichment
+  {
+    title: "CRM Data Enrichment",
+    questions: [
+      ...crmEnrichmentFAQ[0].questions,
+      ...crmEnrichmentFAQ[1].questions,
+    ],
+  },
+
+  // Technographic Data
+  {
+    title: "Technographic Data",
+    questions: [
+      ...technographicDataFAQ[0].questions,
+      ...technographicDataFAQ[1].questions,
+    ],
+  },
+
+  // Data Extraction
+  {
+    title: "Data Extraction",
+    questions: [
+      ...dataExtractionFAQ[0].questions,
+      ...dataExtractionFAQ[1].questions,
+    ],
+  },
+
+  // Data Enrichment Best Practices
+  {
+    title: "Data Enrichment Best Practices",
+    questions: [
+      ...resourcesDataEnrichmentFAQ[0].questions,
+      ...resourcesDataEnrichmentFAQ[1].questions,
+    ],
+  },
+
+  // Credits & Pricing
+  {
+    title: "Credits & Pricing",
+    questions: [
+      ...pricingFAQ[0].questions,
+      ...pricingFAQ[1].questions,
+    ],
+  },
+
+  // API & Integration
+  ...apiIntegrationFAQ,
+
+  // Security & Compliance
+  ...securityComplianceFAQ,
 ];

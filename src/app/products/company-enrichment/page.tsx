@@ -191,6 +191,7 @@ export default function CompanyEnrichmentPage() {
         badge="COMPANY ENRICHMENT API"
         title="Company Enrichment API — Company Data Enrichment"
         description="Enhance company profiles with firmographic data. Turn domains into comprehensive company insights — revenue, headcount, industry classification, and full tech stack."
+        primaryCtaLink="https://docs.b2benrich.com/api/company#linked-in-url-to-company-1-credit-per-request"
         showIllustration={true}
         illustrationPreset="company-enrichment"
       />

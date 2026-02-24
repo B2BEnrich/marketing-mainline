@@ -95,7 +95,7 @@ const FeatureSection = ({
           </div>
           <div className="space-y-4">
             <h3>{title}</h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">{description}</p>
+            <p className="text-muted-foreground">{description}</p>
           </div>
           <ul className="space-y-3">
             {features.map((feature, i) => (

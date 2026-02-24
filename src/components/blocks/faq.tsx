@@ -1,3 +1,5 @@
+import React from "react";
+
 import Link from "next/link";
 
 import {
@@ -94,34 +96,47 @@ export const FAQ = ({
   className,
   className2,
   categories = defaultCategories,
+  title,
+  description,
+  hideHeader = false,
 }: {
   headerTag?: "h1" | "h2";
   className?: string;
   className2?: string;
   categories?: Category[];
+  title?: string;
+  description?: React.ReactNode;
+  hideHeader?: boolean;
 }) => {
+  const headingText = title ?? "Got Questions?";
+  const defaultDescription = (
+    <p className="text-muted-foreground max-w-md lg:mx-auto text-balance">
+      If you can't find what you're looking for,{" "}
+      <Link href="/contact" className="underline underline-offset-4">
+        get in touch
+      </Link>
+      .
+    </p>
+  );
+
   return (
     <section className={cn("py-16", className)}>
       <div className="container max-w-5xl">
         <div className={cn("mx-auto grid gap-16 lg:grid-cols-2", className2)}>
-          <div className="space-y-4">
-            {headerTag === "h1" ? (
-              <h1 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-                Got Questions?
-              </h1>
-            ) : (
-              <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground">
-                Got Questions?
-              </h2>
-            )}
-            <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto text-balance">
-              If you can't find what you're looking for,{" "}
-              <Link href="/contact" className="underline underline-offset-4">
-                get in touch
-              </Link>
-              .
-            </p>
-          </div>
+          {!hideHeader && (
+            <div className="space-y-4">
+              {headerTag === "h1" ? (
+                <h1>
+                  {headingText}
+                </h1>
+              ) : (
+                <h2 className="text-foreground">
+                  {headingText}
+                </h2>
+              )}
+              {description ?? defaultDescription}
+            </div>
+          )}
 
           <div className="grid gap-6 text-start">
             {categories.map((category, categoryIndex) => (

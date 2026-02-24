@@ -246,6 +246,7 @@ export default function DataEnrichmentPage() {
         badge="B2B DATA ENRICHMENT API"
         title="Data Enrichment API & Services for Product Builders"
         description="Enhance your application data with rich profile information, company insights, and verified contact data. Reliable, high-quality B2B data enrichment at scale through a simple RESTful API."
+        primaryCtaLink="https://docs.b2benrich.com/api/person#social-url-to-person-1-credit-per-request"
         showIllustration={true}
         illustrationPreset="people-enrichment"
       />

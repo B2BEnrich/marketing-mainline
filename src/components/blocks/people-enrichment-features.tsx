@@ -78,8 +78,8 @@ const FeatureSection = ({
           </div>
           
           <div className="space-y-4">
-            <h3 className="text-3xl font-semibold tracking-tight text-foreground">{title}</h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <h3 className="text-foreground">{title}</h3>
+            <p className="text-muted-foreground">
               {description}
             </p>
           </div>
@@ -158,7 +158,7 @@ export const PeopleEnrichmentFeatures = () => {
         icon={Terminal}
         code={LINKEDIN_TO_PERSON_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/person#linkedin-url-to-person-1-credit-per-request"
+        link="https://docs.b2benrich.com/api/person#social-url-to-person-1-credit-per-request"
         linkText="View Documentation"
       />
 
@@ -175,7 +175,7 @@ export const PeopleEnrichmentFeatures = () => {
         icon={Phone}
         code={PHONE_TO_LINKEDIN_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/person#phone-to-linkedin-urls-1-credit-per-request"
+        link="https://docs.b2benrich.com/api/person#get-person-by-id-1-credit-per-request"
         linkText="View Documentation"
         align="right"
       />
@@ -193,7 +193,7 @@ export const PeopleEnrichmentFeatures = () => {
         icon={Mail}
         code={EMAIL_TO_LINKEDIN_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/person#email-to-linkedin-urls-1-credit-per-request"
+        link="https://docs.b2benrich.com/api/person#name-and-domain-to-email-1-credit-per-request"
         linkText="View Documentation"
       />
     </section>

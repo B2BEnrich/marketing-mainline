@@ -128,6 +128,25 @@ export const Navbar = () => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
+              {/* FAQ Link */}
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  active={pathname === "/faq"}
+                >
+                  <Link
+                    href="/faq"
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      "bg-transparent",
+                      pathname === "/faq" && "bg-accent text-accent-foreground"
+                    )}
+                  >
+                    FAQ
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
               {/* Pricing Link */}
               <NavigationMenuItem>
                 <NavigationMenuLink 
@@ -291,6 +310,17 @@ export const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Docs
+          </Link>
+
+          <Link
+            href="/faq"
+            className={cn(
+              "text-primary hover:text-primary/80 py-4 text-base font-medium transition-colors",
+              pathname === "/faq" && "text-muted-foreground"
+            )}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            FAQ
           </Link>
 
           <Link

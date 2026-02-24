@@ -81,8 +81,8 @@ const FeatureSection = ({
           </div>
           
           <div className="space-y-4">
-            <h3 className="text-3xl font-semibold tracking-tight text-foreground">{title}</h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <h3 className="text-foreground">{title}</h3>
+            <p className="text-muted-foreground">
               {description}
             </p>
           </div>
@@ -161,7 +161,7 @@ export const CompanySearchFeatures = () => {
         icon={Building2}
         code={COMPANY_SEARCH_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/search#search-companies-5-credits"
+        link="https://docs.b2benrich.com/api/search#search-companies"
         linkText="View Documentation"
       />
 
@@ -178,7 +178,7 @@ export const CompanySearchFeatures = () => {
         icon={Search}
         code={COMPANY_NAME_SEARCH_CODE}
         language="bash"
-        link="https://docs.b2benrich.com/api/search#find-company-by-name-1-credit"
+        link="https://docs.b2benrich.com/api/search#search-companies-by-name-exact-or-fuzzy"
         linkText="View Documentation"
         align="right"
       />
