@@ -370,3 +370,39 @@ body {
 body {
   position: relative;
 }
+
+/* Syntax highlighting — github-light / github-dark token colors */
+:root {
+  --hl-key:  #116329;
+  --hl-str:  #0a3069;
+  --hl-num:  #0550ae;
+  --hl-bool: #0550ae;
+  --hl-null: #6e7781;
+  --hl-kw:   #cf222e;
+  --hl-cmt:  #6e7781;
+  --hl-fn:   #8250df;
+  --hl-url:  #0969da;
+  --hl-flag: #953800;
+}
+.dark {
+  --hl-key:  #7ee787;
+  --hl-str:  #a5d6ff;
+  --hl-num:  #79c0ff;
+  --hl-bool: #79c0ff;
+  --hl-null: #8b949e;
+  --hl-kw:   #ff7b72;
+  --hl-cmt:  #8b949e;
+  --hl-fn:   #d2a8ff;
+  --hl-url:  #79c0ff;
+  --hl-flag: #ffa657;
+}
+.hl-key  { color: var(--hl-key); }
+.hl-str  { color: var(--hl-str); }
+.hl-num  { color: var(--hl-num); }
+.hl-bool { color: var(--hl-bool); }
+.hl-null { color: var(--hl-null); }
+.hl-kw   { color: var(--hl-kw); }
+.hl-cmt  { color: var(--hl-cmt); }
+.hl-fn   { color: var(--hl-fn); }
+.hl-url  { color: var(--hl-url); }
+.hl-flag { color: var(--hl-flag); }
