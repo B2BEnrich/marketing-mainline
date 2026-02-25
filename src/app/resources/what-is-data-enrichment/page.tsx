@@ -1,3 +1,4 @@
+import * as React from "react";
 import { ArrowRight, CheckCircle, BookOpen, Lightbulb, BarChart3, Database, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FAQ } from "@/components/blocks/faq";
@@ -6,6 +7,15 @@ import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 import { ArticleSchema } from "@/components/seo/article-schema";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
+import { LazySection } from "@/components/optimization/lazy-section";
+
+import { CTASkeleton } from "@/components/blocks/footer-cta-skeleton";
+
+const FooterCta = React.lazy(() =>
+  import("@/components/blocks/footer-cta").then((m) => ({
+    default: m.FooterCta,
+  })),
+);
 
 export const metadata = generatePageMetadata({
   title: "What Is Data Enrichment? A Complete Guide",
@@ -342,6 +352,11 @@ export default function WhatIsDataEnrichmentPage() {
       ]}
     />
     <FAQSchema items={flattenCategories(resourcesDataEnrichmentFAQ)} />
+      <LazySection fallback={<CTASkeleton />} rootMargin="400px 0px">
+        <React.Suspense fallback={<CTASkeleton />}>
+          <FooterCta />
+        </React.Suspense>
+      </LazySection>
     </>
   );
 }

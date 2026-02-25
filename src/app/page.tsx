@@ -9,6 +9,14 @@ import { SoftwareAppSchema } from "@/components/seo/software-app-schema";
 import { homeFAQ } from "@/lib/faq-data";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
+import { CTASkeleton } from "@/components/blocks/footer-cta-skeleton";
+
+const FooterCta = React.lazy(() =>
+  import("@/components/blocks/footer-cta").then((m) => ({
+    default: m.FooterCta,
+  })),
+);
+
 const EnrichmentData = React.lazy(() =>
   import("@/components/blocks/enrichment-data").then((m) => ({
     default: m.EnrichmentData,
@@ -84,7 +92,7 @@ function EnrichmentDataSkeleton(): React.JSX.Element {
           enrichment. 1 credit per call.
         </p>
       </div>
-      <div className="container px-4 animate-pulse" aria-hidden="true">
+      <div className="container px-4" aria-hidden="true">
         <div className="mx-auto max-w-4xl text-center mb-12">
           <div className="h-8 bg-muted rounded-lg w-3/4 mx-auto mb-4" />
           <div className="h-4 bg-muted rounded w-full mb-2" />
@@ -136,7 +144,7 @@ function ApiSectionSkeleton(): React.JSX.Element {
           database via REST API.
         </p>
       </div>
-      <div className="container px-4 animate-pulse" aria-hidden="true">
+      <div className="container px-4" aria-hidden="true">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <div className="h-8 bg-muted rounded-lg w-1/2 mx-auto mb-4" />
           <div className="h-4 bg-muted rounded w-full mb-2" />
@@ -187,7 +195,7 @@ function FooterPricingSkeleton(): React.JSX.Element {
           company.
         </p>
       </div>
-      <div className="container px-4 animate-pulse" aria-hidden="true">
+      <div className="container px-4" aria-hidden="true">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <div className="h-8 bg-muted rounded-lg w-1/2 mx-auto mb-4" />
           <div className="h-4 bg-muted rounded w-full mb-2" />
@@ -243,7 +251,7 @@ function HowCreditsWorkSkeleton(): React.JSX.Element {
           services.
         </p>
       </div>
-      <div className="container px-4 animate-pulse" aria-hidden="true">
+      <div className="container px-4" aria-hidden="true">
         <div className="mx-auto max-w-3xl text-center mb-8">
           <div className="h-8 bg-muted rounded-lg w-1/2 mx-auto mb-4" />
           <div className="h-4 bg-muted rounded w-full mb-2" />
@@ -328,7 +336,7 @@ function FAQSkeleton(): React.JSX.Element {
           services and B2B data API.
         </p>
       </div>
-      <div className="w-full py-16 animate-pulse" aria-hidden="true">
+      <div className="w-full py-16" aria-hidden="true">
         <div className="h-80 bg-muted rounded-lg mx-4" />
       </div>
     </div>
@@ -413,6 +421,11 @@ export default function Home() {
       <LazySection fallback={<FAQSkeleton />} rootMargin="200px 0px">
         <React.Suspense fallback={<FAQSkeleton />}>
           <FAQ categories={homeFAQ} />
+        </React.Suspense>
+      </LazySection>
+      <LazySection fallback={<CTASkeleton />} rootMargin="400px 0px">
+        <React.Suspense fallback={<CTASkeleton />}>
+          <FooterCta />
         </React.Suspense>
       </LazySection>
     </>

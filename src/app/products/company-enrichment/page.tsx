@@ -8,6 +8,14 @@ import { companyEnrichmentFAQ } from "@/lib/faq-data";
 import { ContentSummary } from "@/components/seo/content-summary";
 import { generatePageMetadata, flattenCategories } from "@/lib/seo";
 
+import { CTASkeleton } from "@/components/blocks/footer-cta-skeleton";
+
+const FooterCta = React.lazy(() =>
+  import("@/components/blocks/footer-cta").then((m) => ({
+    default: m.FooterCta,
+  })),
+);
+
 const CompanyEnrichmentFeatures = React.lazy(() =>
   import("@/components/blocks/company-enrichment-features").then((m) => ({
     default: m.CompanyEnrichmentFeatures,
@@ -239,6 +247,11 @@ export default function CompanyEnrichmentPage() {
       <LazySection fallback={<FAQSkeleton />} rootMargin="200px 0px">
         <React.Suspense fallback={<FAQSkeleton />}>
           <FAQ categories={companyEnrichmentFAQ} />
+        </React.Suspense>
+      </LazySection>
+      <LazySection fallback={<CTASkeleton />} rootMargin="400px 0px">
+        <React.Suspense fallback={<CTASkeleton />}>
+          <FooterCta />
         </React.Suspense>
       </LazySection>
     </>

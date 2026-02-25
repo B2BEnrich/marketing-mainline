@@ -1,4 +1,5 @@
 import React from "react";
+import { LazySection } from "@/components/optimization/lazy-section";
 
 import Link from "next/link";
 import { type Metadata } from "next";
@@ -8,6 +9,14 @@ import { FAQ } from "@/components/blocks/faq";
 import { DashedLine } from "@/components/dashed-line";
 import { FAQSchema } from "@/components/seo/faq-schema";
 import { comprehensiveFAQ } from "@/lib/faq-data";
+
+import { CTASkeleton } from "@/components/blocks/footer-cta-skeleton";
+
+const FooterCta = React.lazy(() =>
+  import("@/components/blocks/footer-cta").then((m) => ({
+    default: m.FooterCta,
+  })),
+);
 
 export const metadata: Metadata = {
   title: "FAQ – B2BEnrich",
@@ -85,6 +94,11 @@ const Page = () => {
           </div>
         </div>
       </section>
+      <LazySection fallback={<CTASkeleton />} rootMargin="400px 0px">
+        <React.Suspense fallback={<CTASkeleton />}>
+          <FooterCta />
+        </React.Suspense>
+      </LazySection>
     </>
   );
 };

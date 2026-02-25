@@ -136,6 +136,7 @@ export const Navbar = () => {
                 >
                   <Link
                     href="/faq"
+                    prefetch={false}
                     className={cn(
                       navigationMenuTriggerStyle(),
                       "bg-transparent",
@@ -155,6 +156,7 @@ export const Navbar = () => {
                 >
                   <Link 
                     href="/pricing"
+                    prefetch={false}
                     className={cn(
                         navigationMenuTriggerStyle(), 
                         "bg-transparent",
@@ -314,6 +316,7 @@ export const Navbar = () => {
 
           <Link
             href="/faq"
+            prefetch={false}
             className={cn(
               "text-primary hover:text-primary/80 py-4 text-base font-medium transition-colors",
               pathname === "/faq" && "text-muted-foreground"
@@ -325,7 +328,8 @@ export const Navbar = () => {
 
           <Link
             href="/pricing"
-             className={cn(
+            prefetch={false}
+            className={cn(
                 "text-primary hover:text-primary/80 py-4 text-base font-medium transition-colors",
                 pathname === "/pricing" && "text-muted-foreground"
             )}

@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import type { Metadata, Viewport } from "next";
 
 import { Footer } from "@/components/blocks/footer";
-import { FooterCta } from "@/components/blocks/footer-cta";
 import { Navbar } from "@/components/blocks/navbar";
 import { CriticalCSS } from "@/components/optimization/critical-css";
 import { DeferredScripts } from "@/components/scripts/deferred-scripts";
@@ -15,44 +14,24 @@ import "@/styles/globals.css";
 const dmSans = localFont({
   src: [
     {
-      path: "../../fonts/dm-sans/DMSans-Regular.ttf",
+      path: "../../fonts/dm-sans/DMSans-Regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../fonts/dm-sans/DMSans-Italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../../fonts/dm-sans/DMSans-Medium.ttf",
+      path: "../../fonts/dm-sans/DMSans-Medium.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../fonts/dm-sans/DMSans-MediumItalic.ttf",
-      weight: "500",
-      style: "italic",
-    },
-    {
-      path: "../../fonts/dm-sans/DMSans-SemiBold.ttf",
+      path: "../../fonts/dm-sans/DMSans-SemiBold.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../fonts/dm-sans/DMSans-SemiBoldItalic.ttf",
-      weight: "600",
-      style: "italic",
-    },
-    {
-      path: "../../fonts/dm-sans/DMSans-Bold.ttf",
+      path: "../../fonts/dm-sans/DMSans-Bold.woff2",
       weight: "700",
       style: "normal",
-    },
-    {
-      path: "../../fonts/dm-sans/DMSans-BoldItalic.ttf",
-      weight: "700",
-      style: "italic",
     },
   ],
   variable: "--font-dm-sans",
@@ -204,7 +183,6 @@ export default function RootLayout({
           <div className="bg-background">
             <div className="mx-2 md:mx-8 lg:mx-12 xl:mx-16">
               <div className="border-border/20 border-x">
-                <FooterCta />
                 <Footer />
               </div>
             </div>
