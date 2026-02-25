@@ -6,8 +6,8 @@ export function OrganizationSchema() {
     legalName: "B2BEnrich",
     description:
       "B2B data enrichment API providing people enrichment, company enrichment, email validation, B2B contact search, and prospecting across 550M+ contacts and 50M+ companies.",
-    url: "https://b2benrich.com",
-    logo: "https://b2benrich.com/favicon/favicon.svg",
+    url: "https://www.b2benrich.com",
+    logo: "https://www.b2benrich.com/favicon/favicon.svg",
     foundingDate: "2023",
     slogan: "The B2B data enrichment API for developers and product teams.",
     keywords:

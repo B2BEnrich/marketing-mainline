@@ -322,7 +322,7 @@ export default function WhatIsDataEnrichmentPage() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button asChild size="lg">
-            <a href="https://app.b2benrich.com">
+            <a href="https://app.b2benrich.com/auth/sign-up">
               Get Started Free <ArrowRight className="ml-2 size-4" />
             </a>
           </Button>
@@ -339,15 +339,15 @@ export default function WhatIsDataEnrichmentPage() {
       title="What Is Data Enrichment? A Complete Guide"
       description="Learn what data enrichment is, how it works, and the best techniques and tools for B2B use cases."
       publishedAt="2026-02-22"
-      url="https://b2benrich.com/resources/what-is-data-enrichment"
+      url="https://www.b2benrich.com/resources/what-is-data-enrichment"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://b2benrich.com/" },
-        { name: "Resources", url: "https://b2benrich.com/resources" },
+        { name: "Home", url: "https://www.b2benrich.com/" },
+        { name: "Resources", url: "https://www.b2benrich.com/resources" },
         {
           name: "What Is Data Enrichment?",
-          url: "https://b2benrich.com/resources/what-is-data-enrichment",
+          url: "https://www.b2benrich.com/resources/what-is-data-enrichment",
         },
       ]}
     />

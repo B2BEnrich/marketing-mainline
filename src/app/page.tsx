@@ -347,13 +347,13 @@ export default function Home() {
   return (
     <>
       <BreadcrumbSchema
-        items={[{ name: "Home", url: "https://b2benrich.com/" }]}
+        items={[{ name: "Home", url: "https://www.b2benrich.com/" }]}
       />
       <FAQSchema items={flattenCategories(homeFAQ)} />
       <SoftwareAppSchema
         name="B2BEnrich — B2B Data Enrichment API"
         description="Real-time REST API providing people enrichment, company enrichment, email verification, B2B contact search, and prospecting across 550M+ contacts and 50M+ companies."
-        url="https://b2benrich.com"
+        url="https://www.b2benrich.com"
         category="BusinessApplication"
       />
       <ServiceSchema

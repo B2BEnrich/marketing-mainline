@@ -181,11 +181,11 @@ export default function PeopleEnrichmentPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://b2benrich.com/" },
-          { name: "Products", url: "https://b2benrich.com/products" },
+          { name: "Home", url: "https://www.b2benrich.com/" },
+          { name: "Products", url: "https://www.b2benrich.com/products" },
           {
             name: "People Enrichment API",
-            url: "https://b2benrich.com/products/people-enrichment",
+            url: "https://www.b2benrich.com/products/people-enrichment",
           },
         ]}
       />
@@ -193,7 +193,7 @@ export default function PeopleEnrichmentPage() {
       <SoftwareAppSchema
         name="B2BEnrich People Enrichment API"
         description="Lead enrichment API turning emails, phones, and profile URLs into complete professional profiles with 250+ data points. 1 credit per call."
-        url="https://b2benrich.com/products/people-enrichment"
+        url="https://www.b2benrich.com/products/people-enrichment"
         category="BusinessApplication"
       />
 

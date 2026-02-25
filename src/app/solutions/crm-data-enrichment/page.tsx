@@ -188,11 +188,11 @@ export default function CrmDataEnrichmentPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://b2benrich.com/" },
-          { name: "Solutions", url: "https://b2benrich.com/solutions" },
+          { name: "Home", url: "https://www.b2benrich.com/" },
+          { name: "Solutions", url: "https://www.b2benrich.com/solutions" },
           {
             name: "CRM Data Enrichment",
-            url: "https://b2benrich.com/solutions/crm-data-enrichment",
+            url: "https://www.b2benrich.com/solutions/crm-data-enrichment",
           },
         ]}
       />
@@ -200,7 +200,7 @@ export default function CrmDataEnrichmentPage() {
       <SoftwareAppSchema
         name="B2BEnrich CRM Data Enrichment"
         description="Automate CRM data enrichment for HubSpot, Salesforce, and Pipedrive. Keep CRM records fresh with verified contact data and company insights."
-        url="https://b2benrich.com/solutions/crm-data-enrichment"
+        url="https://www.b2benrich.com/solutions/crm-data-enrichment"
         category="BusinessApplication"
       />
 

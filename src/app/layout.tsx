@@ -65,7 +65,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://b2benrich.com"),
+  metadataBase: new URL("https://www.b2benrich.com"),
   title: {
     default: "B2BEnrich",
     template: "%s | B2BEnrich",
@@ -116,7 +116,7 @@ export const metadata: Metadata = {
     title: "B2BEnrich — B2B Data Enrichment API",
     description:
       "B2B data enrichment API — enrich contacts and companies with 250+ data points. Access 550M+ profiles and 50M+ companies.",
-    url: "https://b2benrich.com",
+    url: "https://www.b2benrich.com",
     images: [
       {
         url: "/og-image.png",
