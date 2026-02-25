@@ -127,6 +127,7 @@ const FeatureSection = ({
             </span>
             <button
               onClick={handleCopy}
+              aria-label={copied ? "Copied" : "Copy code"}
               className="absolute top-2 right-2 size-8 p-2 opacity-0 group-hover:opacity-100 inline-flex items-center justify-center rounded-md border bg-background shadow-sm hover:bg-accent transition-all"
             >
               {copied ? (

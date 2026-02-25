@@ -335,6 +335,7 @@ export function ApiSection() {
                 </span>
                 <button
                   onClick={handleCopyRequest}
+                  aria-label={copiedRequest ? "Copied" : "Copy request"}
                   className="absolute top-2 right-2 size-7 p-1.5 opacity-0 group-hover:opacity-100 inline-flex items-center justify-center rounded-md border bg-background shadow-sm hover:bg-accent transition-all"
                 >
                   {copiedRequest ? (
@@ -381,6 +382,7 @@ export function ApiSection() {
                 </span>
                 <button
                   onClick={handleCopyResponse}
+                  aria-label={copiedResponse ? "Copied" : "Copy response"}
                   className="absolute top-2 right-2 size-7 p-1.5 opacity-0 group-hover:opacity-100 inline-flex items-center justify-center rounded-md border bg-background shadow-sm hover:bg-accent transition-all"
                 >
                   {copiedResponse ? (
