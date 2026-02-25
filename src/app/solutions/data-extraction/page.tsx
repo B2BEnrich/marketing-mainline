@@ -238,11 +238,11 @@ export default function DataExtractionPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://b2benrich.com/" },
-          { name: "Solutions", url: "https://b2benrich.com/solutions" },
+          { name: "Home", url: "https://www.b2benrich.com/" },
+          { name: "Solutions", url: "https://www.b2benrich.com/solutions" },
           {
             name: "Data Extraction API",
-            url: "https://b2benrich.com/solutions/data-extraction",
+            url: "https://www.b2benrich.com/solutions/data-extraction",
           },
         ]}
       />
@@ -250,7 +250,7 @@ export default function DataExtractionPage() {
       <SoftwareAppSchema
         name="B2BEnrich Data Extraction API"
         description="B2B data extraction API for developers. Extract professional profiles and company data from 500M+ contacts and 50M+ companies via REST API."
-        url="https://b2benrich.com/solutions/data-extraction"
+        url="https://www.b2benrich.com/solutions/data-extraction"
         category="BusinessApplication"
       />
 

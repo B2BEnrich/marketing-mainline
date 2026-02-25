@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { Category } from "@/components/blocks/faq";
 
-const BASE_URL = "https://b2benrich.com";
+const BASE_URL = "https://www.b2benrich.com";
 const OG_IMAGE = `${BASE_URL}/og-image.png`;
 
 export function generatePageMetadata({

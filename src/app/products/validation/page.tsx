@@ -191,11 +191,11 @@ export default function ValidationPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://b2benrich.com/" },
-          { name: "Products", url: "https://b2benrich.com/products" },
+          { name: "Home", url: "https://www.b2benrich.com/" },
+          { name: "Products", url: "https://www.b2benrich.com/products" },
           {
             name: "Email Verification & Validation API",
-            url: "https://b2benrich.com/products/validation",
+            url: "https://www.b2benrich.com/products/validation",
           },
         ]}
       />
@@ -203,7 +203,7 @@ export default function ValidationPage() {
       <SoftwareAppSchema
         name="B2BEnrich Email Verification & Validation API"
         description="Real-time email verification API with SMTP checks, deliverability scoring, disposable address detection, and phone validation. 1 credit per check."
-        url="https://b2benrich.com/products/validation"
+        url="https://www.b2benrich.com/products/validation"
         category="BusinessApplication"
       />
 

@@ -192,11 +192,11 @@ export default function ProspectorPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://b2benrich.com/" },
-          { name: "Products", url: "https://b2benrich.com/products" },
+          { name: "Home", url: "https://www.b2benrich.com/" },
+          { name: "Products", url: "https://www.b2benrich.com/products" },
           {
             name: "B2B Prospector API",
-            url: "https://b2benrich.com/products/prospector",
+            url: "https://www.b2benrich.com/products/prospector",
           },
         ]}
       />
@@ -204,7 +204,7 @@ export default function ProspectorPage() {
       <SoftwareAppSchema
         name="B2BEnrich Prospector API"
         description="Advanced B2B prospecting API with 30+ filters. Find verified contacts and companies by technology, revenue, industry, and location to build targeted lead lists."
-        url="https://b2benrich.com/products/prospector"
+        url="https://www.b2benrich.com/products/prospector"
         category="BusinessApplication"
       />
 

@@ -181,11 +181,11 @@ export default function PeopleSearchPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://b2benrich.com/" },
-          { name: "Products", url: "https://b2benrich.com/products" },
+          { name: "Home", url: "https://www.b2benrich.com/" },
+          { name: "Products", url: "https://www.b2benrich.com/products" },
           {
             name: "B2B Contact Database & People Search",
-            url: "https://b2benrich.com/products/people-search",
+            url: "https://www.b2benrich.com/products/people-search",
           },
         ]}
       />
@@ -193,7 +193,7 @@ export default function PeopleSearchPage() {
       <SoftwareAppSchema
         name="B2BEnrich People Search API"
         description="B2B contact database search API with 550M+ professionals. Filter by job title, company, seniority, and location to build targeted lead lists."
-        url="https://b2benrich.com/products/people-search"
+        url="https://www.b2benrich.com/products/people-search"
         category="BusinessApplication"
       />
 

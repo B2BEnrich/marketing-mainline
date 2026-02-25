@@ -39,7 +39,7 @@ export const Hero = () => {
               className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
               asChild
             >
-              <a href="https://app.b2benrich.com" className="truncate">
+              <a href="https://app.b2benrich.com/auth/sign-up" className="truncate">
                 Sign Up
                 <ArrowRight className="stroke-3" />
               </a>

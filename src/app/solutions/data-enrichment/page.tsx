@@ -235,11 +235,11 @@ export default function DataEnrichmentPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://b2benrich.com/" },
-          { name: "Solutions", url: "https://b2benrich.com/solutions" },
+          { name: "Home", url: "https://www.b2benrich.com/" },
+          { name: "Solutions", url: "https://www.b2benrich.com/solutions" },
           {
             name: "Data Enrichment API",
-            url: "https://b2benrich.com/solutions/data-enrichment",
+            url: "https://www.b2benrich.com/solutions/data-enrichment",
           },
         ]}
       />
@@ -247,7 +247,7 @@ export default function DataEnrichmentPage() {
       <SoftwareAppSchema
         name="B2BEnrich Data Enrichment API"
         description="B2B data enrichment API for product builders. Enrich contacts, companies, and CRM records with verified data — 250+ data points, 1 credit per call."
-        url="https://b2benrich.com/solutions/data-enrichment"
+        url="https://www.b2benrich.com/solutions/data-enrichment"
         category="BusinessApplication"
       />
 

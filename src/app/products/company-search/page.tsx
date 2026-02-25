@@ -189,11 +189,11 @@ export default function CompanySearchPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://b2benrich.com/" },
-          { name: "Products", url: "https://b2benrich.com/products" },
+          { name: "Home", url: "https://www.b2benrich.com/" },
+          { name: "Products", url: "https://www.b2benrich.com/products" },
           {
             name: "Company Search API",
-            url: "https://b2benrich.com/products/company-search",
+            url: "https://www.b2benrich.com/products/company-search",
           },
         ]}
       />
@@ -201,7 +201,7 @@ export default function CompanySearchPage() {
       <SoftwareAppSchema
         name="B2BEnrich Company Search API"
         description="B2B company database search API with 50M+ companies. Filter by industry, location, revenue, employee count, and technology stack."
-        url="https://b2benrich.com/products/company-search"
+        url="https://www.b2benrich.com/products/company-search"
         category="BusinessApplication"
       />
 

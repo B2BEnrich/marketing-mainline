@@ -180,11 +180,11 @@ export default function CompanyEnrichmentPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://b2benrich.com/" },
-          { name: "Products", url: "https://b2benrich.com/products" },
+          { name: "Home", url: "https://www.b2benrich.com/" },
+          { name: "Products", url: "https://www.b2benrich.com/products" },
           {
             name: "Company Enrichment API",
-            url: "https://b2benrich.com/products/company-enrichment",
+            url: "https://www.b2benrich.com/products/company-enrichment",
           },
         ]}
       />
@@ -192,7 +192,7 @@ export default function CompanyEnrichmentPage() {
       <SoftwareAppSchema
         name="B2BEnrich Company Enrichment API"
         description="Company enrichment API that turns domains into rich firmographic profiles — revenue, headcount, industry, tech stack, and funding data. 1 credit per call."
-        url="https://b2benrich.com/products/company-enrichment"
+        url="https://www.b2benrich.com/products/company-enrichment"
         category="BusinessApplication"
       />
 

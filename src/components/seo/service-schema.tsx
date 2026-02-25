@@ -21,7 +21,7 @@ export function ServiceSchema({
     provider: {
       "@type": "Organization",
       name: provider,
-      url: "https://b2benrich.com",
+      url: "https://www.b2benrich.com",
     },
     areaServed,
     hasOfferCatalog: {

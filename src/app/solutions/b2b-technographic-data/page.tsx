@@ -195,11 +195,11 @@ export default function B2BTechnographicDataPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://b2benrich.com/" },
-          { name: "Solutions", url: "https://b2benrich.com/solutions" },
+          { name: "Home", url: "https://www.b2benrich.com/" },
+          { name: "Solutions", url: "https://www.b2benrich.com/solutions" },
           {
             name: "B2B Technographic Data",
-            url: "https://b2benrich.com/solutions/b2b-technographic-data",
+            url: "https://www.b2benrich.com/solutions/b2b-technographic-data",
           },
         ]}
       />
@@ -207,7 +207,7 @@ export default function B2BTechnographicDataPage() {
       <SoftwareAppSchema
         name="B2BEnrich Technographic Data API"
         description="B2B technographic data API providing technology stack intelligence for 50M+ companies. Discover software usage, tech adoption signals, and technographic segmentation."
-        url="https://b2benrich.com/solutions/b2b-technographic-data"
+        url="https://www.b2benrich.com/solutions/b2b-technographic-data"
         category="BusinessApplication"
       />
 

@@ -21,14 +21,14 @@ export function ArticleSchema({
     author: {
       "@type": "Organization",
       name: "B2BEnrich",
-      url: "https://b2benrich.com",
+      url: "https://www.b2benrich.com",
     },
     publisher: {
       "@type": "Organization",
       name: "B2BEnrich",
       logo: {
         "@type": "ImageObject",
-        url: "https://b2benrich.com/favicon/favicon.svg",
+        url: "https://www.b2benrich.com/favicon/favicon.svg",
       },
     },
     mainEntityOfPage: {

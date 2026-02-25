@@ -190,11 +190,11 @@ export default function B2BDatabasePage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://b2benrich.com/" },
-          { name: "Solutions", url: "https://b2benrich.com/solutions" },
+          { name: "Home", url: "https://www.b2benrich.com/" },
+          { name: "Solutions", url: "https://www.b2benrich.com/solutions" },
           {
             name: "B2B Database",
-            url: "https://b2benrich.com/solutions/b2b-database",
+            url: "https://www.b2benrich.com/solutions/b2b-database",
           },
         ]}
       />
@@ -202,7 +202,7 @@ export default function B2BDatabasePage() {
       <SoftwareAppSchema
         name="B2BEnrich B2B Database API"
         description="B2B database with 550M+ contacts and 50M+ companies. Access verified emails, firmographic data, and company intelligence via real-time REST API."
-        url="https://b2benrich.com/solutions/b2b-database"
+        url="https://www.b2benrich.com/solutions/b2b-database"
         category="BusinessApplication"
       />
 
