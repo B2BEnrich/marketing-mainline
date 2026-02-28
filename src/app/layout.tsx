@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 
 import type { Metadata, Viewport } from "next";
 
@@ -162,12 +163,33 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KB3B7QRW');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
         <CriticalCSS />
         <OrganizationSchema />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       </head>
       <body className={`${dmSans.variable} ${inter.variable} antialiased`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KB3B7QRW"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -189,6 +211,12 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <DeferredScripts />
+        <Script
+          src="https://datafa.st/js/script.js"
+          data-website-id="dfid_NPHWJvxSBhnLEFmzqxjYS"
+          data-domain="b2benrich.com"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
